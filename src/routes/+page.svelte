@@ -3,6 +3,7 @@
 	import Home from './(pages)/home/Home.svelte';
 	import '../app.css';
 	import { onMount } from 'svelte';
+	import Wave from '$lib/Wave.svelte';
 
 	let scrollY = $state(0);
 	let isNavbarSticky = $state(false);
@@ -58,6 +59,7 @@
 	class:backdrop-blur-sm={isNavbarSticky}
 >
 	<Navbar />
+	<Wave />
 </div>
 
 <!-- Contenu principal -->
