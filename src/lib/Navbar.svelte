@@ -7,7 +7,7 @@
 	const navs = [
 		{
 			title: 'Home',
-			href: '/'
+			href: '/home'
 		},
 		{
 			title: 'Paintings',
@@ -79,7 +79,7 @@
 				<div class="hidden sm:block">
 					<div class="flex space-x-4">
 						{#each navs as { title, href }}
-							{#if href === currentPath}
+							{#if href === currentPath || (href === '/home' && currentPath === '/')}
 								<a
 									{href}
 									{title}
