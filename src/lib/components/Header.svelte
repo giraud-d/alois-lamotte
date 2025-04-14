@@ -1,0 +1,14 @@
+<script>
+	import Navbar from '$lib/components/Navbar.svelte';
+	import Wave from '$lib/components/Wave.svelte';
+</script>
+
+<div class="bg-gray-800 py-5 text-white">
+	<a href="/">
+		<h1 class="text-center text-5xl font-bold">Aloïs Lamotte</h1>
+	</a>
+</div>
+
+<Navbar />
+
+<Wave />

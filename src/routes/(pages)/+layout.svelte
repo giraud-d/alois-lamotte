@@ -1,9 +1,15 @@
 <script lang="ts">
-	import Header from '$lib/Header.svelte';
+	import Header from '$lib/components/Header.svelte';
 	import '../../app.css';
-	let { children } = $props();
+    import { page } from '$app/stores';
+
+    let { children } = $props();
+
+	let isPaintingPage = $derived($page.url.pathname.startsWith('/painting/'));
 </script>
 
-<Header />
+{#if !isPaintingPage}
+	<Header />
+{/if}
 
 {@render children()}

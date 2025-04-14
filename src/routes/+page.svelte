@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Navbar from '$lib/Navbar.svelte';
+	import Navbar from '$lib/components/Navbar.svelte';
 	import Home from './(pages)/home/Home.svelte';
-	import '../app.css';
-	import { onMount } from 'svelte';
-	import Wave from '$lib/Wave.svelte';
+    import Wave from '$lib/components/Wave.svelte';
+    import '../app.css';
+    import { onMount } from 'svelte';
 
 	let scrollY = $state(0);
 	let isNavbarSticky = $state(false);
@@ -15,7 +15,6 @@
 				isNavbarSticky = scrollY >= introSection.offsetHeight;
 			}
 		};
-
 		window.addEventListener('resize', updateIntroHeight);
 		return () => window.removeEventListener('resize', updateIntroHeight);
 	});
@@ -27,8 +26,8 @@
 	});
 </script>
 
+<!-- Intro fullscreen -->
 <svelte:window bind:scrollY />
-
 <div
 	bind:this={introSection}
 	class="relative min-h-screen bg-cover bg-center bg-no-repeat"
@@ -50,7 +49,6 @@
 	</div>
 </div>
 
-<!-- Navbar sticky -->
 <div
 	class="z-50 w-full transition-all duration-300 ${isNavbarSticky ? 'bg-white/80' : ''}"
 	class:sticky={isNavbarSticky}
@@ -62,23 +60,20 @@
 	<Wave />
 </div>
 
-<!-- Contenu principal -->
 <main class="container mx-auto px-5">
 	<Home />
 </main>
 
 <style>
-	/* Correction hauteur iOS */
-	@supports (-webkit-touch-callout: none) {
-		.min-h-screen {
-			min-height: -webkit-fill-available;
-		}
-	}
+    @supports (-webkit-touch-callout: none) {
+        .min-h-screen {
+            min-height: fit-content;
+        }
+    }
 
-	/* Transition fluide pour le sticky */
-	.sticky {
-		transition-property: all;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-		transition-duration: 300ms;
-	}
+    .sticky {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+    }
 </style>
