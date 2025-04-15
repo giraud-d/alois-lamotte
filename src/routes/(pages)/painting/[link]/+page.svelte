@@ -63,6 +63,10 @@
 			} else if (nextPainting) {
 				window.location.href = `/painting/${nextPainting.link}`;
 			}
+		} else if (e.key === 'Escape' && isModalOpen) {
+			closeModal();
+		} else if ((e.key === 'Enter' || e.key === ' ') && !isModalOpen) {
+			openModal();
 		}
 	}
 
@@ -86,7 +90,7 @@
 			<div class="max-w-7xl mx-auto">
 				<div class="grid grid-cols-1 md:grid-cols-10 gap-4 md:gap-8">
 					<div class="md:col-span-6">
-						<div class="w-full" style="aspect-ratio: {$containerRatio}">
+						<div class="w-full max-h-[84vh]" style="aspect-ratio: {$containerRatio}">
 							<button
 								class="w-full h-full cursor-pointer bg-transparent border-0 p-0"
 								on:click={openModal}
