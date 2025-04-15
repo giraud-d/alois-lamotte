@@ -1,10 +1,10 @@
 <script lang="ts">
     import ArtWork from "$lib/components/ArtWork.svelte";
     import {ArtWorkType} from "$lib/models/ArtWork";
-    import {paintings} from "$lib/data/paintings";
+    import {illustrations} from "$lib/data/illustrations";
 </script>
 
 <ArtWork
-        artWorkType={ArtWorkType.PAINTING}
-        artWorks={paintings}
+        artWorkType={ArtWorkType.ILLUSTRATION}
+        artWorks={illustrations}
 />

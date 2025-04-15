@@ -1,6 +1,6 @@
 import { writable, derived } from 'svelte/store';
-import type { Language } from '$lib/translations';
-import { translations } from '$lib/translations';
+import type { Language } from '$lib/data/translations';
+import { translations } from '$lib/data/translations';
 
 function getBrowserLanguage(): Language {
     if (typeof window === 'undefined') return 'en';

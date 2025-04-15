@@ -8,8 +8,7 @@ export interface Translations {
         about: string;
         contact: string;
     };
-    painting: {
-        title: string;
+    artWork: {
         date: {
             months: string[];
         };
@@ -20,6 +19,12 @@ export interface Translations {
             back: string;
         };
         notFound: string;
+    };
+    painting: {
+        title: string;
+    },
+    illustration: {
+        title: string;
     };
 }
 
@@ -32,8 +37,7 @@ export const translations: Record<Language, Translations> = {
             about: 'À propos',
             contact: 'Contact'
         },
-        painting: {
-            title: 'Peintures',
+        artWork: {
             date: {
                 months: ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']
             },
@@ -44,6 +48,12 @@ export const translations: Record<Language, Translations> = {
                 back: 'Retour'
             },
             notFound: 'Peinture non trouvée'
+        },
+        painting: {
+            title: 'Peinture'
+        },
+        illustration: {
+            title: 'Illustration'
         }
     },
     en: {
@@ -54,8 +64,7 @@ export const translations: Record<Language, Translations> = {
             about: 'About',
             contact: 'Contact'
         },
-        painting: {
-            title: 'Paintings',
+        artWork: {
             date: {
                 months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
             },
@@ -66,6 +75,12 @@ export const translations: Record<Language, Translations> = {
                 back: 'Back'
             },
             notFound: 'Painting not found'
+        },
+        painting: {
+            title: 'Painting'
+        },
+        illustration: {
+            title: 'Illustration'
         }
     }
 }; 

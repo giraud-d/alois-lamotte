@@ -1,5 +1,10 @@
-<h1>Illustration</h1>
-<ul>
-	<li>2024</li>
-	<li>2023</li>
-</ul>
+<script lang="ts">
+    import Gallery from "$lib/components/Gallery.svelte";
+    import {ArtWorkType} from "$lib/models/ArtWork";
+    import {illustrationsByYear} from "$lib/data/illustrations";
+</script>
+
+<Gallery
+        artWorkType={ArtWorkType.ILLUSTRATION}
+        artWorksByYear={illustrationsByYear}
+/>

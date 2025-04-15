@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { language } from '$lib/stores/language';
+	import { language } from '$lib/language';
 	let currentPath: string = $derived($page.url.pathname);
 	let isMenuOpen: boolean = $state(false);
 
