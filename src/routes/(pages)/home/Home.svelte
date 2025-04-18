@@ -4,72 +4,78 @@
     import Wave from "$lib/components/Wave.svelte";
 </script>
 
-<section class="max-w-7xl mx-auto">
-    <h1 class="text-center text-5xl font-medium">Bienvenue !</h1>
-</section>
+<main>
 
-<section class="max-w-7xl py-24 mx-auto">
-    <h3 class="pb-8 text-2xl">Petite introduction : </h3>
-    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra erat libero, et ultrices velit rhoncus
-        tempor. Curabitur a fermentum diam, finibus dapibus nunc. Morbi a felis euismod, cursus eros eget, feugiat nunc. Fusce tellus sem, accumsan ac mattis
-        ut, aliquam eget diam. Nunc ut neque sapien. Pellentesque eu dui leo. Pellentesque efficitur leo imperdiet convallis finibus. Cras convallis orci vel
-        nulla luctus gravida. Suspendisse sagittis fermentum metus aliquet placerat. Vestibulum quis egestas ex, commodo porttitor nulla. Nunc sollicitudin
-        porta tortor eget aliquet. Aliquam in dapibus arcu. Nam eget elit ut leo auctor sagittis. Curabitur in rutrum massa. </p>
-</section>
-
-<Wave color="#d1d5db" towardsBottom={false}/>
-<div class="bg-gray-300">
-    <section class="max-w-7xl py-24 mx-auto">
-    <h3 class="pb-8 text-2xl">A la une</h3>
-    <ArtWorkDetails artWork={paintings[11]}/>
+    <section class="container mx-auto px-5">
+        <h1 class="text-center text-5xl font-medium">Bienvenue !</h1>
     </section>
-</div>
-<Wave color="#d1d5db"/>
 
-<section class="max-w-7xl py-24 mx-auto">
-    <h3 class="pb-16 text-2xl">Venez découvrir toutes mes réalisations :</h3>
-    <div class="grid grid-flow-row-dense grid-cols-3 gap-16">
-        <a href="/painting" class="square linkedin">
-            <span></span>
-            <span></span>
-            <span></span>
-            <div class="content text-black">
-                <h3 class="text-2xl">
-                    Peinture
-                </h3>
-                <p>J'utilise des pinceaux et des toiles</p>
-            </div>
-        </a>
-        <a href="/illustration" class="square">
-            <span></span>
-            <span></span>
-            <span></span>
-            <div class="content text-black">
-                <h3 class="text-2xl">
-                    Illustration
-                </h3>
-                <p>J'utilise des ordinateurs et adobe</p>
-            </div>
-        </a>
-        <a href="/painting" class="square">
-            <span></span>
-            <span></span>
-            <span></span>
-            <div class="content text-black">
-                <h3 class="text-2xl">
-                    Projets
-                </h3>
-                <p>
-                    Vidéo youtube
-                    Mobilier
-                    des perspectives d'archi
-                    une première de couverture
-                    miniature de cinéma
-                </p>
-            </div>
-        </a>
+    <section class="container mx-auto px-5 py-8">
+        <h3 class="pb-8 text-2xl">Petite introduction : </h3>
+        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra erat libero, et ultrices velit rhoncus
+            tempor. Curabitur a fermentum diam, finibus dapibus nunc. Morbi a felis euismod, cursus eros eget, feugiat nunc. Fusce tellus sem, accumsan ac
+            mattis
+            ut, aliquam eget diam. Nunc ut neque sapien. Pellentesque eu dui leo. Pellentesque efficitur leo imperdiet convallis finibus. Cras convallis orci
+            vel
+            nulla luctus gravida. Suspendisse sagittis fermentum metus aliquet placerat. Vestibulum quis egestas ex, commodo porttitor nulla. Nunc sollicitudin
+            porta tortor eget aliquet. Aliquam in dapibus arcu. Nam eget elit ut leo auctor sagittis. Curabitur in rutrum massa. </p>
+    </section>
+
+    <Wave color="#d1d5db" towardsBottom={false}/>
+    <div class="bg-gray-300">
+        <section class="container mx-auto px-5 py-8">
+            <h3 class="pb-8 text-2xl">A la une</h3>
+            <ArtWorkDetails artWork={paintings[11]}/>
+        </section>
     </div>
-</section>
+    <Wave color="#d1d5db"/>
+
+    <section class="container mx-auto px-5 py-8">
+        <h3 class="pb-16 text-2xl">Venez découvrir toutes mes réalisations :</h3>
+        <div class="grid grid-flow-row-dense grid-cols-3 gap-16">
+            <a href="/painting" class="square linkedin">
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="content text-black">
+                    <h3 class="text-2xl">
+                        Peinture
+                    </h3>
+                    <p>J'utilise des pinceaux et des toiles</p>
+                </div>
+            </a>
+            <a href="/illustration" class="square">
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="content text-black">
+                    <h3 class="text-2xl">
+                        Illustration
+                    </h3>
+                    <p>J'utilise des ordinateurs et adobe</p>
+                </div>
+            </a>
+            <a href="/painting" class="square">
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="content text-black">
+                    <h3 class="text-2xl">
+                        Projets
+                    </h3>
+                    <p>
+                        Vidéo youtube
+                        Mobilier
+                        des perspectives d'archi
+                        une première de couverture
+                        miniature de cinéma
+                    </p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+</main>
 
 
 <style>

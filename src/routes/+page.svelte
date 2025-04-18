@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Home from './(pages)/home/Home.svelte';
+    import Home from "./(pages)/home/Home.svelte";
     import Header from "$lib/components/Header.svelte";
     import '../app.css';
 </script>
@@ -28,8 +28,6 @@
 <Header withoutName="{true}"/>
 
 <Home />
-<main class="container mx-auto px-5">
-</main>
 
 <style>
     @supports (-webkit-touch-callout: none) {
