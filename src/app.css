@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@view-transition {
+    navigation: auto;
+}
+
 @layer base {
     :root {
         --font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic';

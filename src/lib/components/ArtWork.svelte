@@ -3,81 +3,30 @@
     import { language } from "$lib/language";
     import { translations } from "$lib/data/translations";
     import type {ArtWork, ArtWorkType} from "$lib/models/ArtWork";
-    import { derived, writable } from 'svelte/store';
-    import { onMount } from 'svelte';
+    import { derived } from 'svelte/store';
+    import ArtWorkDetails from "$lib/components/ArtWorkDetails.svelte";
 
     export let artWorkType: ArtWorkType;
     export let artWorks: ArtWork[];
 
     const t = derived(language, () => translations[$language]);
 
-    let currentViewIndex = 0;
-    let isModalOpen = false;
-    let containerRatio = writable('1/1');
-
     $: artWork = artWorks.find(p => p.link === $page.params.link);
     $: currentIndex = artWork ? artWorks.findIndex(p => p.link === artWork.link) : -1;
     $: prevArtWork = currentIndex > 0 ? artWorks[currentIndex - 1] : null;
     $: nextArtWork = currentIndex < artWorks.length - 1 ? artWorks[currentIndex + 1] : null;
-
-    function handleImageLoad(e: Event) {
-        const img = e.target as HTMLImageElement;
-        const ratio = img.naturalWidth / img.naturalHeight;
-        const limitedRatio = Math.min(Math.max(ratio, 0.5), 2);
-        containerRatio.set(`${limitedRatio}/1`);
-    }
-
-    function formatDate(dateStr: string): string {
-        const date = new Date(dateStr);
-        if ($language === 'fr') {
-            return `${date.getDate()} ${$t.artWork.date.months[date.getMonth()]} ${date.getFullYear()}`;
-        }
-        return date.toLocaleDateString($language, {
-            year: 'numeric',
-            month: 'long',
-        });
-    }
-
-    function openModal() {
-        isModalOpen = true;
-        document.body.classList.add('modal-open');
-    }
-
-    function closeModal() {
-        isModalOpen = false;
-        document.body.classList.remove('modal-open');
-    }
-
-    function stopPropagation(e: MouseEvent) {
-        e.stopPropagation();
-    }
-
-    function handleKeyDown(e: KeyboardEvent) {
-        if (!artWork) return;
-
-        if (e.key === 'ArrowLeft') {
-            if (currentViewIndex > 0) {
-                currentViewIndex--;
-            } else if (prevArtWork) {
-                window.location.href = `/${artWorkType}/${prevArtWork.link}`;
-            }
-        } else if (e.key === 'ArrowRight') {
-            if (currentViewIndex < artWork.views.length - 1) {
-                currentViewIndex++;
-            } else if (nextArtWork) {
-                window.location.href = `/${artWorkType}/${nextArtWork.link}`;
-            }
-        } else if (e.key === 'Escape' && isModalOpen) {
-            closeModal();
-        } else if ((e.key === 'Enter' || e.key === ' ') && !isModalOpen) {
-            openModal();
+    
+    function goToPreviousPage() {
+        if (prevArtWork) {
+            window.location.href = `/${artWorkType}/${prevArtWork.link}`;
         }
     }
-
-    onMount(() => {
-        window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
-    });
+    
+    function goToNextPage() {
+        if (nextArtWork) {
+            window.location.href = `/${artWorkType}/${nextArtWork.link}`;
+        }
+    }
 </script>
 
 <div class="flex flex-col bg-white">
@@ -91,49 +40,12 @@
 
     {#if artWork}
         <main class="flex-grow bg-white text-black p-8">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-10 gap-4 md:gap-8">
-                    <div class="md:col-span-6">
-                        <div class="w-full max-h-[84vh]" style="aspect-ratio: {$containerRatio}">
-                            <button
-                                    class="w-full h-full cursor-pointer bg-transparent border-0 p-0"
-                                    on:click={openModal}
-                            >
-                                <img
-                                        src={artWork.views[currentViewIndex]}
-                                        alt={artWork.title}
-                                        class="w-full h-full object-contain"
-                                        on:load={handleImageLoad}
-                                />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="md:col-span-4 flex flex-col">
-                        <h1 class="text-2xl md:text-4xl font-medium mb-4">{artWork.title}</h1>
-                        <p class="text-gray-600 mb-2">{formatDate(artWork.date)}</p>
-                        <p class="text-gray-600 mb-2 italic">{artWork.technique}</p>
-                        <p class="text-gray-600 mb-4">{artWork.dimensions.height} × {artWork.dimensions.width} cm</p>
-                        <p class="text-base md:text-lg mb-8">{artWork.description}</p>
-                        {#if artWork.views.length > 1}
-                            <div class="flex gap-2 md:gap-4 overflow-x-auto pb-4 pt-4">
-                                {#each artWork.views as view, i}
-                                    <button
-                                            class="flex-shrink-0 w-16 h-16 md:w-24 md:h-24 relative first:ml-1"
-                                            on:click={() => currentViewIndex = i}
-                                            aria-label="Vue {i + 1}"
-                                    >
-                                        <img
-                                                src={view}
-                                                alt=""
-                                                class="w-full h-full object-cover rounded-md {currentViewIndex === i ? 'ring-2 ring-black' : ''}"
-                                        />
-                                    </button>
-                                {/each}
-                            </div>
-                        {/if}
-                    </div>
-                </div>
-            </div>
+
+            <ArtWorkDetails 
+                artWork="{artWork}"
+                on:previousPage={goToPreviousPage}
+                on:nextPage={goToNextPage}
+            />
 
             <div class="max-w-7xl mx-auto mt-8 flex justify-between">
                 {#if prevArtWork}
@@ -149,45 +61,9 @@
             </div>
         </main>
 
-        {#if isModalOpen}
-            <dialog
-                    class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center bg-black w-screen h-screen"
-                    aria-modal="true"
-                    open
-            >
-                <button
-                        class="absolute top-2 right-2 md:top-4 md:right-4 text-white text-4xl md:text-8xl hover:opacity-75 transition-opacity p-2 md:p-8"
-                        on:click={closeModal}
-                        aria-label="Fermer"
-                >
-                    &times;
-                </button>
-                <button
-                        class="w-full h-full flex items-center justify-center p-4 bg-black border-0 cursor-default"
-                        on:click={stopPropagation}
-                        on:keydown={handleKeyDown}
-                >
-                    <img
-                            src={artWork.views[currentViewIndex]}
-                            alt={artWork.title}
-                            class="max-h-[90vh] max-w-full object-contain"
-                    />
-                </button>
-            </dialog>
-        {/if}
     {:else}
         <div class="flex-grow bg-white text-black flex items-center justify-center">
             <p>{$t.artWork.notFound}</p>
         </div>
     {/if}
 </div>
-
-<style>
-    :global(body) {
-        overflow-y: scroll;
-    }
-
-    .modal-backdrop {
-        overscroll-behavior: none;
-    }
-</style>

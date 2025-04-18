@@ -1,35 +1,11 @@
 <script lang="ts">
-	import Navbar from '$lib/components/Navbar.svelte';
 	import Home from './(pages)/home/Home.svelte';
-    import Wave from '$lib/components/Wave.svelte';
+    import Header from "$lib/components/Header.svelte";
     import '../app.css';
-    import { onMount } from 'svelte';
-
-	let scrollY = $state(0);
-	let isNavbarSticky = $state(false);
-	let introSection: HTMLElement | null = null;
-
-	onMount(() => {
-		const updateIntroHeight = () => {
-			if (introSection) {
-				isNavbarSticky = scrollY >= introSection.offsetHeight;
-			}
-		};
-		window.addEventListener('resize', updateIntroHeight);
-		return () => window.removeEventListener('resize', updateIntroHeight);
-	});
-
-	$effect(() => {
-		if (introSection) {
-			isNavbarSticky = scrollY >= introSection.offsetHeight;
-		}
-	});
 </script>
 
 <!-- Intro fullscreen -->
-<svelte:window bind:scrollY />
 <div
-	bind:this={introSection}
 	class="relative min-h-screen bg-cover bg-center bg-no-repeat"
 	style="background-image: url('assets/tmp-banner.png');"
 >
@@ -49,19 +25,10 @@
 	</div>
 </div>
 
-<div
-	class="z-50 w-full transition-all duration-300 ${isNavbarSticky ? 'bg-white/80' : ''}"
-	class:sticky={isNavbarSticky}
-	class:top-0={isNavbarSticky}
-	class:shadow-xl={isNavbarSticky}
-	class:backdrop-blur-sm={isNavbarSticky}
->
-	<Navbar />
-	<Wave />
-</div>
+<Header withoutName="{true}"/>
 
+<Home />
 <main class="container mx-auto px-5">
-	<Home />
 </main>
 
 <style>
@@ -69,11 +36,5 @@
         .min-h-screen {
             min-height: fit-content;
         }
-    }
-
-    .sticky {
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 300ms;
     }
 </style>
