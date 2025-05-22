@@ -3,6 +3,8 @@
     import '../../app.css';
     import { page } from '$app/stores';
 
+    export const prerender = true;
+
     let { children } = $props();
 
 	let isPaintingPage = $derived($page.url.pathname.startsWith('/painting/'));

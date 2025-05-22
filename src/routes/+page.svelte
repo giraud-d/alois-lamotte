@@ -2,6 +2,8 @@
     import Home from "./(pages)/home/Home.svelte";
     import Header from "$lib/components/Header.svelte";
     import '../app.css';
+
+    export const prerender = true;
 </script>
 
 <!-- Intro fullscreen -->
