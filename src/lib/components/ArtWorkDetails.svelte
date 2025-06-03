@@ -3,15 +3,23 @@
     import {derived, writable} from "svelte/store";
     import {language} from "$lib/language";
     import {translations} from "$lib/data/translations";
-    import {createEventDispatcher, onMount} from 'svelte';
+    import {onMount} from 'svelte';
 
-    export let artWork: ArtWork;
-    export let isModalOpen = false;
+    let {
+        artWork,
+        isModalOpen = false,
+        previousPage,
+        nextPage
+    }: {
+        artWork: ArtWork;
+        isModalOpen?: boolean;
+        previousPage: () => void;
+        nextPage: () => void;
+    } = $props();
 
-    const dispatch = createEventDispatcher();
     const t = derived(language, () => translations[$language]);
 
-    let currentViewIndex = 0;
+    let currentViewIndex = $state(0);
     let containerRatio = writable('1/1');
     let imgElement: HTMLImageElement;
 
@@ -45,13 +53,13 @@
             if (currentViewIndex > 0) {
                 currentViewIndex--;
             } else {
-                dispatch('previousPage');
+                previousPage();
             }
         } else if (e.key === 'ArrowRight') {
             if (currentViewIndex < artWork.views.length - 1) {
                 currentViewIndex++;
             } else {
-                dispatch('nextPage');
+                nextPage();
             }
         } else if (e.key === 'Escape' && isModalOpen) {
             closeModal();
@@ -71,24 +79,24 @@
         if (imgElement?.complete) {
             handleImageLoad({ target: imgElement } as unknown as Event);
         }
-        window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
     });
 </script>
+
+<svelte:window on:keydown={handleKeyDown} />
 
 <figure class="grid grid-cols-1 md:grid-cols-10 gap-4 md:gap-8">
     <div class="md:col-span-6">
         <div class="w-full max-h-[84vh]" style="aspect-ratio: {$containerRatio}">
             <button
                     class="w-full h-full cursor-pointer bg-transparent border-0 p-0"
-                    on:click={openModal}
+                    onclick={openModal}
             >
                 <img
                         src={artWork.views[currentViewIndex]}
                         alt={artWork.title}
                         class="w-full h-full object-contain"
                         bind:this={imgElement}
-                        on:load={handleImageLoad}
+                        onload={handleImageLoad}
                 />
             </button>
         </div>
@@ -104,7 +112,7 @@
                 {#each artWork.views as view, i}
                     <button
                             class="flex-shrink-0 w-16 h-16 md:w-24 md:h-24 relative first:ml-1"
-                            on:click={() => currentViewIndex = i}
+                            onclick={() => currentViewIndex = i}
                             aria-label="Vue {i + 1}"
                     >
                         <img
@@ -127,15 +135,14 @@
     >
         <button
                 class="absolute top-2 right-2 md:top-4 md:right-4 text-white text-4xl md:text-8xl hover:opacity-75 transition-opacity p-2 md:p-8"
-                on:click={closeModal}
+                onclick={closeModal}
                 aria-label="Fermer"
         >
             &times;
         </button>
         <button
                 class="w-full h-full flex items-center justify-center p-4 bg-black border-0 cursor-default"
-                on:click={stopPropagation}
-                on:keydown={handleKeyDown}
+                onclick={stopPropagation}
         >
             <img
                     src={artWork.views[currentViewIndex]}

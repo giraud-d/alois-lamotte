@@ -44,8 +44,8 @@
             <section class="flex-grow text-black p-8">
                 <ArtWorkDetails
                         artWork="{artWork}"
-                        on:previousPage={goToPreviousPage}
-                        on:nextPage={goToNextPage}
+                        previousPage={goToPreviousPage}
+                        nextPage={goToNextPage}
                 />
                 <div class="max-w-7xl mx-auto mt-8 flex justify-between">
                     {#if prevArtWork}
