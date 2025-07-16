@@ -55,7 +55,7 @@
                     <p>J'utilise des ordinateurs et adobe</p>
                 </div>
             </a>
-            <a href="/painting" class="square">
+            <a href="/project" class="square">
                 <span></span>
                 <span></span>
                 <span></span>

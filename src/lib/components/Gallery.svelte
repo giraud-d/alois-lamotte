@@ -14,7 +14,7 @@
 
     {#each Object.keys(artWorksByYear).sort((a, b) => Number(b) - Number(a)) as year}
         <div class="mb-16">
-            <h2 class="text-3xl font-medium mb-8 text-center">{year}</h2>
+            <h2 class="text-3xl font-medium m-8">{year}</h2>
             <div class="max-w-[1800px] mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8">
                     {#each artWorksByYear[Number(year)] as artWork}
@@ -23,7 +23,7 @@
                                class="relative w-full cursor-pointer bg-transparent border-0 p-0 block"
                                role="button"
                                tabindex="0">
-                                <div class="svgBlob" style="aspect-ratio: {Math.min(2, artWork.dimensions.width / artWork.dimensions.height)}/1;">
+                                <div class="svgBlob" style="aspect-ratio: {Math.max(0.75, Math.min(2, artWork.dimensions.width / artWork.dimensions.height))}/1;">
                                     <svg viewBox="0 0 500 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                                         <defs>
                                             <linearGradient id="blobGradient-{year}-{artWork.title}">

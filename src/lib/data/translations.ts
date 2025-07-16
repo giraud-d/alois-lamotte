@@ -24,6 +24,7 @@ export const translations = {
 				home: { fr: 'Accueil', en: 'Home' },
 				paintings: { fr: 'Peintures', en: 'Paintings' },
 				illustrations: { fr: 'Illustrations', en: 'Illustrations' },
+				projects: { fr: 'Projets', en: 'Projects' },
 				about: { fr: 'À propos', en: 'About' },
 				contact: { fr: 'Contact', en: 'Contact' }
 		},

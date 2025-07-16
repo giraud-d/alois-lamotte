@@ -19,6 +19,10 @@
             titleKey: 'nav.illustrations',
 			href: '/illustration'
 		},
+        {
+            titleKey: 'nav.projects',
+            href: '/project'
+        },
 		{
             titleKey: 'nav.about',
 			href: '/about'
