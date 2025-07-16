@@ -1,6 +1,6 @@
-import { writable, derived } from 'svelte/store';
-import type { Language } from '$lib/data/translations';
-import { translations } from '$lib/data/translations';
+import { writable } from 'svelte/store';
+
+export type Language = 'fr' | 'en';
 
 function getBrowserLanguage(): Language {
     if (typeof window === 'undefined') return 'en';
@@ -9,4 +9,3 @@ function getBrowserLanguage(): Language {
 }
 
 export const language = writable<Language>(getBrowserLanguage());
-export const t = derived(language, ($language) => translations[$language]); 

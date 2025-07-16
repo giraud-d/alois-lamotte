@@ -1,28 +1,30 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { language } from '$lib/language';
+    import { language, type Language } from '$lib/language';
+    import { t } from "$lib/data/translations";
+
 	let currentPath: string = $derived($page.url.pathname);
 	let isMenuOpen: boolean = $state(false);
 
 	const navs = [
 		{
-			title: 'Home',
+            titleKey: 'nav.home',
 			href: '/home'
 		},
 		{
-			title: 'Paintings',
+            titleKey: 'nav.paintings',
 			href: '/painting'
 		},
 		{
-			title: 'Illustrations',
+            titleKey: 'nav.illustrations',
 			href: '/illustration'
 		},
 		{
-			title: 'About Me',
-			href: '/about-me'
+            titleKey: 'nav.about',
+			href: '/about'
 		},
 		{
-			title: 'Contact',
+            titleKey: 'nav.contact',
 			href: '/contact'
 		}
 	];
@@ -32,9 +34,9 @@
 		isMenuOpen = !isMenuOpen;
 	}
 
-	function toggleLanguage() {
-		$language = $language === 'fr' ? 'en' : 'fr';
-	}
+    function toggleLanguage() {
+        language.update((l: Language) => l === 'fr' ? 'en' : 'fr');
+    }
 </script>
 
 <nav class="bg-gray-800">
@@ -82,20 +84,20 @@
 			<div class="flex flex-1 justify-center">
 				<div class="hidden sm:block">
 					<div class="flex space-x-4">
-						{#each navs as { title, href }}
+						{#each navs as { titleKey, href }}
 							{#if href === currentPath || (href === '/home' && currentPath === '/')}
 								<a
 									{href}
-									{title}
+									title="{$t(titleKey)}"
 									class="text-md rounded-md bg-gray-900 px-3 py-2 font-medium text-white"
-									aria-current="page">{title}</a
+									aria-current="page">{$t(titleKey)}</a
 								>
 							{:else}
 								<a
 									{href}
-									{title}
+                                    title="{$t(titleKey)}"
 									class="text-md rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-									>{title}</a
+									>{$t(titleKey)}</a
 								>
 							{/if}
 						{/each}
@@ -114,21 +116,21 @@
 	{#if isMenuOpen}
 		<div class="sm:hidden" id="mobile-menu">
 			<div class="space-y-1 px-2 pb-3 pt-2">
-				{#each navs as { title, href }}
+				{#each navs as { titleKey, href }}
 					{#if href === currentPath}
 						<a
 							{href}
-							{title}
+                            title="{$t(titleKey)}"
 							class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
 							onclick={toggleMenu}
-							aria-current="page">{title}</a
+							aria-current="page">{$t(titleKey)}</a
 						>
 					{:else}
 						<a
 							{href}
-							{title}
+                            title="{$t(titleKey)}"
 							class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-							onclick={toggleMenu}>{title}</a
+							onclick={toggleMenu}>{$t(titleKey)}</a
 						>
 					{/if}
 				{/each}

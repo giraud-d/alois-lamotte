@@ -1,18 +1,15 @@
 <script lang="ts">
-    import {translations} from '$lib/data/translations';
-    import {derived} from 'svelte/store';
-    import {language} from "$lib/language";
+    import { t } from "$lib/data/translations";
     import {type ArtWorkByYear, ArtWorkType} from "$lib/models/ArtWork";
 
     export let artWorkType: ArtWorkType;
     export let artWorksByYear: ArtWorkByYear;
 
-    const t = derived(language, () => translations[$language]);
 </script>
 
 <main>
     <h1 class="pt-2 pb-16 text-center text-5xl font-medium">
-        {artWorkType === ArtWorkType.PAINTING ? $t.painting.title : $t.illustration.title}
+        {artWorkType === ArtWorkType.PAINTING ? $t('painting.title') : $t('illustration.title')}
     </h1>
 
     {#each Object.keys(artWorksByYear).sort((a, b) => Number(b) - Number(a)) as year}

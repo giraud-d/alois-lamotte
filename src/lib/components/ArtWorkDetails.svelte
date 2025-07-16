@@ -1,9 +1,9 @@
 <script lang="ts">
     import type {ArtWork} from "$lib/models/ArtWork";
-    import {derived, writable} from "svelte/store";
+    import {get, writable} from "svelte/store";
     import {language} from "$lib/language";
-    import {translations} from "$lib/data/translations";
     import {onMount} from 'svelte';
+    import {translations} from "$lib/data/translations";
 
     let {
         artWork,
@@ -17,22 +17,26 @@
         nextPage: () => void;
     } = $props();
 
-    const t = derived(language, () => translations[$language]);
 
     let currentViewIndex = $state(0);
     let containerRatio = writable('1/1');
     let imgElement: HTMLImageElement;
 
     function formatDate(dateStr: string): string {
+        const lang = get(language);
         const date = new Date(dateStr);
-        if ($language === 'fr') {
-            return `${date.getDate()} ${$t.artWork.date.months[date.getMonth()]} ${date.getFullYear()}`;
+
+        if (lang === 'fr') {
+            const months = translations.artWork.date.months.fr;
+            return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
+        } else {
+            return date.toLocaleDateString(lang, {
+                year: 'numeric',
+                month: 'long',
+            });
         }
-        return date.toLocaleDateString($language, {
-            year: 'numeric',
-            month: 'long',
-        });
     }
+
 
     function stopPropagation(e: MouseEvent) {
         e.stopPropagation();

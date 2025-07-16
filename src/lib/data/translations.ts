@@ -1,86 +1,51 @@
-export type Language = 'fr' | 'en';
+import { derived } from 'svelte/store';
+import { language, type Language } from '$lib/language';
 
-export interface Translations {
-    nav: {
-        home: string;
-        paintings: string;
-        illustrations: string;
-        about: string;
-        contact: string;
-    };
-    artWork: {
-        date: {
-            months: string[];
-        };
-        navigation: {
-            next: string;
-            previous: string;
-            close: string;
-            back: string;
-        };
-        notFound: string;
-    };
-    painting: {
-        title: string;
-    },
-    illustration: {
-        title: string;
-    };
-}
+export const t = derived(language, ($language) => {
+		return (path: string): string => {
+				const keys = path.split('.');
+				let result: unknown = translations;
+				for (const k of keys) {
+						if (typeof result === 'object' && result !== null && k in result) {
+								result = (result as Record<string, unknown>)[k];
+						} else {
+								return '';
+						}
+				}
+				if (typeof result === 'object' && result !== null && $language in (result as Record<string, string>)) {
+						return (result as Record<Language, string>)[$language];
+				}
+				return '';
+		};
+});
 
-export const translations: Record<Language, Translations> = {
-    fr: {
-        nav: {
-            home: 'Accueil',
-            paintings: 'Peintures',
-            illustrations: 'Illustrations',
-            about: 'À propos',
-            contact: 'Contact'
-        },
-        artWork: {
-            date: {
-                months: ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']
-            },
-            navigation: {
-                next: 'Suivant',
-                previous: 'Précédent',
-                close: 'Fermer',
-                back: 'Retour'
-            },
-            notFound: 'Peinture non trouvée'
-        },
-        painting: {
-            title: 'Peinture'
-        },
-        illustration: {
-            title: 'Illustration'
-        }
-    },
-    en: {
-        nav: {
-            home: 'Home',
-            paintings: 'Paintings',
-            illustrations: 'Illustrations',
-            about: 'About',
-            contact: 'Contact'
-        },
-        artWork: {
-            date: {
-                months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-            },
-            navigation: {
-                next: 'Next',
-                previous: 'Previous',
-                close: 'Close',
-                back: 'Back'
-            },
-            notFound: 'Painting not found'
-        },
-        painting: {
-            title: 'Painting'
-        },
-        illustration: {
-            title: 'Illustration'
-        }
-    }
-}; 
+export const translations = {
+		nav: {
+				home: { fr: 'Accueil', en: 'Home' },
+				paintings: { fr: 'Peintures', en: 'Paintings' },
+				illustrations: { fr: 'Illustrations', en: 'Illustrations' },
+				about: { fr: 'À propos', en: 'About' },
+				contact: { fr: 'Contact', en: 'Contact' }
+		},
+		artWork: {
+				date: {
+						months: {
+								fr: ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
+								en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+						}
+				},
+				navigation: {
+						next: { fr: 'Suivant', en: 'Next' },
+						previous: { fr: 'Précédent', en: 'Previous' },
+						close: { fr: 'Fermer', en: 'Close' },
+						back: { fr: 'Retour', en: 'Back' }
+				},
+				notFound: { fr: 'Œuvre non trouvée', en: 'Art work not found' }
+		},
+		painting: {
+				title: { fr: 'Peinture', en: 'Painting' }
+		},
+		illustration: {
+				title: { fr: 'Illustration', en: 'Illustration' }
+		}
+};
