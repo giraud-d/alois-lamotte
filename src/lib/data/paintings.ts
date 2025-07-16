@@ -39,9 +39,9 @@ export const paintings: ArtWork[] = [
 		title: 'La falaise au matin',
 		description: '', // description absente dans le document
 		date: '2024-01-01', // à adapter
-		preview: '/assets/paintings/0.jpg', // Empty
+		preview: '/assets/tmp-shapes.png', // Empty
 		link: '5-falaise-au-matin',
-		views: ['/assets/paintings/0.jpg'], // Empty
+		views: ['/assets/tmp-shapes.png'], // Empty
 		technique: 'Acrylique sur toile',
 		dimensions: { height: 24, width: 18 }
 	},
@@ -60,9 +60,9 @@ export const paintings: ArtWork[] = [
 		title: 'Levée du rideau de brume',
 		description: 'Ce tableau a été peint à un moment critique, il symbolise la libération d’une situation qui semblait perdue et insolvable.',
 		date: '2024-01-01', // à adapter
-		preview: '/assets/paintings/0.jpg', // Empty
+		preview: '/assets/tmp-shapes.png', // Empty
 		link: '7-levee-rideau-brume',
-		views: ['/assets/paintings/0.jpg'], // Empty
+		views: ['/assets/tmp-shapes.png'], // Empty
 		technique: 'Huile et acrylique sur toile',
 		dimensions: { height: 50, width: 40 }
 	},
@@ -70,9 +70,9 @@ export const paintings: ArtWork[] = [
 		title: 'Piégée',
 		description: 'La liberté chérie au travers d’une fenêtre à barreaux.',
 		date: '2024-01-01', // à adapter
-		preview: '/assets/paintings/0.jpg',  // EMPTY
+		preview: '/assets/tmp-shapes.png',  // EMPTY
 		link: '14-piegee',
-		views: ['/assets/paintings/0.jpg'],  // EMPTY
+		views: ['/assets/tmp-shapes.png'],  // EMPTY
 		technique: 'Huile et acrylique sur toile',
 		dimensions: {
 			height: 0,
@@ -109,9 +109,9 @@ export const paintings: ArtWork[] = [
 		description:
 			'Les corps se déhanchaient sous le rythme de la musique, une demi-pénombre régnait en ces lieux. Quelques spots, çà et là, venaient caresser ton visage. L’ambiance était festive, tout semblait s’animer autour de toi, pourtant ton regard était fermé, tu semblais en dehors de ce temps, perdu dans une profonde mélancolie d’une époque qui jamais plus ne reviendra.',
 		date: '2023-01-01', // à adapter
-		preview: '/assets/paintings/discordance_main.jpg',
+		preview: '/assets/paintings/discordance_main.png',
 		link: 'discordance',
-		views: ['/assets/paintings/discordance_main.jpg'],
+		views: ['/assets/paintings/discordance_main.png'],
 		technique: 'Huile sur toile',
 		dimensions: { height: 60, width: 40 }
 	},
@@ -119,9 +119,9 @@ export const paintings: ArtWork[] = [
 		title: 'Une idée au loin dans le tumulte du quotidien',
 		description: "Ci-gît la cristallisation d’une idée fixe au loin. Un but dont le parcours est semé d'embûches.",
 		date: '2023-01-01', // à adapter
-		preview: '/assets/paintings/0.jpg', // Empty
+		preview: '/assets/tmp-shapes.png', // Empty
 		link: 'idee-au-loin',
-		views: ['/assets/paintings/0.jpg'], // Empty
+		views: ['/assets/tmp-shapes.png'], // Empty
 		technique: 'Huile et mycelium sur grain de millet collé sur toile',
 		dimensions: { height: 60, width: 50 }
 	},
@@ -190,9 +190,9 @@ export const paintings: ArtWork[] = [
 		description:
 			"L'expérimentation a débuté enfant, je collectais de la sève d’abricotier pour y inventer des bijoux avec du branchage. En 2015, alors qu’elle s’écoulait du tronc sous une chaleur de plomb, l’idée me vint de la faire fondre sur un support et d’attendre qu’elle soit plus stable.",
 		date: '2015-01-01', // à adapter
-		preview: '/assets/paintings/0.jpg',  // Empty
+		preview: '/assets/tmp-shapes.png',  // Empty
 		link: 'ambree',
-		views: ['/assets/paintings/0.jpg'],  // Empty
+		views: ['/assets/tmp-shapes.png'],  // Empty
 		technique: "Gomme d'abricotier avec acrylique sur bois",
 		dimensions: { height: 42, width: 30 }
 	},
