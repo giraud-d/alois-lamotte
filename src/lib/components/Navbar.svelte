@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-    import { language, type Language } from '$lib/language';
+    //import { language, type Language } from '$lib/language';
     import { t } from "$lib/data/translations";
 
 	let currentPath: string = $derived($page.url.pathname);
@@ -38,9 +38,10 @@
 		isMenuOpen = !isMenuOpen;
 	}
 
-    function toggleLanguage() {
-        language.update((l: Language) => l === 'fr' ? 'en' : 'fr');
-    }
+    // Only french for now
+    // function toggleLanguage() {
+    //     language.update((l: Language) => l === 'fr' ? 'en' : 'fr');
+    // }
 </script>
 
 <nav class="bg-gray-800">
@@ -105,12 +106,12 @@
 								>
 							{/if}
 						{/each}
-						<button
-							class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors"
-							onclick={toggleLanguage}
-						>
-							{$language === 'fr' ? 'EN' : 'FR'}
-						</button>
+<!--						<button-->
+<!--							class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors"-->
+<!--							onclick={toggleLanguage}-->
+<!--						>-->
+<!--							{$language === 'fr' ? 'EN' : 'FR'}-->
+<!--						</button>-->
 					</div>
 				</div>
 			</div>
@@ -138,10 +139,10 @@
 						>
 					{/if}
 				{/each}
-				<button
-					class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors" onclick={toggleLanguage}>
-					{$language === 'fr' ? 'EN' : 'FR'}
-				</button>
+<!--				<button-->
+<!--					class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors" onclick={toggleLanguage}>-->
+<!--					{$language === 'fr' ? 'EN' : 'FR'}-->
+<!--				</button>-->
 			</div>
 		</div>
 	{/if}
