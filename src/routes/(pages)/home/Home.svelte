@@ -32,8 +32,8 @@
 
     <section class="container mx-auto px-5 py-8">
         <h3 class="pb-16 text-2xl">Venez découvrir toutes mes réalisations :</h3>
-        <div class="grid grid-flow-row-dense grid-cols-3 gap-16">
-            <a href="/painting" class="square linkedin">
+        <div class="grid grid-flow-row-dense sm:grid-cols-2 lg:grid-cols-3 gap-16">
+            <a href="/painting" class="square mx-auto">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -44,7 +44,7 @@
                     <p>J'utilise des pinceaux et des toiles</p>
                 </div>
             </a>
-            <a href="/illustration" class="square">
+            <a href="/illustration" class="square mx-auto">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -55,7 +55,7 @@
                     <p>J'utilise des ordinateurs et adobe</p>
                 </div>
             </a>
-            <a href="/project" class="square">
+            <a href="/project" class="square mx-auto sm:col-span-2 lg:col-span-1">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -80,6 +80,7 @@
 
 <style>
     .square {
+        max-width: 20rem;
         position: relative;
         display: flex;
         aspect-ratio: 1 / 1;

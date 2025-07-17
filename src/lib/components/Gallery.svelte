@@ -14,8 +14,8 @@
 
     {#each Object.keys(artWorksByYear).sort((a, b) => Number(b) - Number(a)) as year}
         <div class="mb-16">
-            <h2 class="text-3xl font-medium m-8">{year}</h2>
             <div class="max-w-[1800px] mx-auto px-4">
+                <h2 class="text-3xl font-medium m-8">{year}</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8">
                     {#each artWorksByYear[Number(year)] as artWork}
                         <div class="flex items-center justify-center w-full">
