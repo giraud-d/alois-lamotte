@@ -43,7 +43,7 @@
                         previousPage={goToPreviousPage}
                         nextPage={goToNextPage}
                 />
-                <div class="max-w-7xl mx-auto mt-8 flex justify-between">
+                <div class="max-w-7xl mx-auto mt-8 flex flex-col space-y-4 sm:flex-row sm:justify-between sm:space-y-0">
                     {#if prevArtWork}
                         <a href="/{artWorkType}/{prevArtWork.link}" class="text-xl text-black hover:opacity-75 transition-opacity"
                            aria-label={$t('artWork.navigation.previous')}>
@@ -51,12 +51,13 @@
                         </a>
                     {/if}
                     {#if nextArtWork}
-                        <a href="/{artWorkType}/{nextArtWork.link}" class="text-xl text-black hover:opacity-75 transition-opacity"
+                        <a href="/{artWorkType}/{nextArtWork.link}" class="text-xl text-black hover:opacity-75 transition-opacity ml-auto"
                            aria-label={$t('artWork.navigation.next')}>
                             {nextArtWork.title} →
                         </a>
                     {/if}
                 </div>
+
             </section>
         {:else}
             <div class="flex-grow  text-black flex items-center justify-center">
