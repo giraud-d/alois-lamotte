@@ -5,7 +5,7 @@ export interface ArtWorkByYear {
 export interface ArtWork {
     title: string;
     description: string;
-    date: string;
+    year: number;
     preview: string;
     link: string;
     views: string[];

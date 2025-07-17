@@ -25,7 +25,7 @@
     <div class="bg-gray-300">
         <section class="container mx-auto px-5 py-8">
             <h3 class="pb-8 text-2xl">A la une</h3>
-            <ArtWorkDetails artWork={paintings[11]}/>
+            <ArtWorkDetails artWork={paintings[0]} previousPage={() => undefined} nextPage={() => undefined}/>
         </section>
     </div>
     <Wave color="#d1d5db"/>

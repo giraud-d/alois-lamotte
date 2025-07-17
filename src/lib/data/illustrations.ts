@@ -1,11 +1,10 @@
 import {type ArtWork, type ArtWorkByYear} from '$lib/models/ArtWork';
 
-// Must be sorted by date ASC
 export const illustrations: ArtWork[] = [
 	{
 		title: 'Souvenir de juin',
 		description: '', // description absente
-		date: '2024-06-01', // à adapter
+		year: 2024,
 		preview: '/assets/illustrations/souvenir-de-juin_main.png',
 		link: 'souvenir-de-juin',
 		views: ['/assets/illustrations/souvenir-de-juin_main.png'],
@@ -16,7 +15,7 @@ export const illustrations: ArtWork[] = [
 		title: 'Fading away',
 		description:
 			'J’ai toujours eu du mal à appréhender mes émotions et mes relations – avec mes amis, ma famille, mes amants. Pour y voir plus clair, j’ai construit une demeure mentale : une réplique de la maison de mes grands-parents, où chaque pièce incarne un pan de mes liens aux autres. Le salon accueille mes amis proches, la terrasse mes connaissances. Le bureau abrite mes amours passés, tandis que la cuisine fige mes grands-parents dans un petit-déjeuner éternel depuis le départ de ma grand-mère en 2020. Seule ma fille, en dehors de moi, peut circuler librement dans cette demeure figée. Dans la première chambre, le reste de ma famille ; dans la seconde, mes amours présents. Cette illustration représente cette dernière. Elle retranscrit un rêve où un amour passé devient souvenir, s’effaçant peu à peu au contact de la réalité. Sous le lit, des boîtes s’empilent, symbolisant ces souvenirs douloureux que l’on tente d’enfouir au plus profond de sa conscience.',
-		date: '2023-01-01', // à adapter
+		year: 2023,
 		preview: '/assets/illustrations/fading-away_main.jpg',
 		link: 'fading-away',
 		views: ['/assets/illustrations/fading-away_main.jpg'],
@@ -26,7 +25,7 @@ export const illustrations: ArtWork[] = [
 	{
 		title: 'Birth or death',
 		description: 'Les bananes seins, hommages à ces bananes scotchées aux murs',
-		date: '2023-01-01', // à adapter
+		year: 2023,
 		preview: '/assets/illustrations/birth-and-death_main.jpg',
 		link: 'birth-or-death',
 		views: ['/assets/illustrations/birth-and-death_main.jpg'],
@@ -36,7 +35,7 @@ export const illustrations: ArtWork[] = [
 	{
 		title: 'L’aviateur et le lion',
 		description: 'Une aventure qui tourne au vinaigre ?',
-		date: '2016-01-01', // à adapter
+		year: 2016,
 		preview: '/assets/illustrations/l-aviateur-et-le-lion_main.jpg',
 		link: '4-aviateur-lion',
 		views: ['/assets/illustrations/l-aviateur-et-le-lion_main.jpg'],
@@ -46,7 +45,7 @@ export const illustrations: ArtWork[] = [
 	{
 		title: 'Chou hibou',
 		description: '', // description absente
-		date: '2014-01-01', // à adapter
+		year: 2014,
 		preview: '/assets/illustrations/chou-hibou_main.png',
 		link: '2-chou-hibou',
 		views: ['/assets/illustrations/chou-hibou_main.png'],
@@ -56,7 +55,7 @@ export const illustrations: ArtWork[] = [
 	{
 		title: 'Genèse inspiration de Matis',
 		description: '', // description absente
-		date: '2010-01-01', // à adapter
+		year: 2010,
 		preview: '/assets/illustrations/genese-inspiration-de-matis_main.png',
 		link: 'genese-inspiration-de-matis',
 		views: ['/assets/illustrations/genese-inspiration-de-matis_main.png'],
@@ -70,7 +69,7 @@ export const illustrations: ArtWork[] = [
 	{
 		title: '1',
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
-		date: '2000-01-01',
+		year: 2000,
 		preview: '/assets/illustrations/1.jpg',
 		link: '1',
 		views: ['/assets/illustrations/1.jpg', '/assets/illustrations/1.jpg', '/assets/illustrations/1.jpg'],
@@ -80,7 +79,7 @@ export const illustrations: ArtWork[] = [
 	{
 		title: '2',
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
-		date: '2000-01-01',
+		year: 2000,
 		preview: '/assets/illustrations/2.jpg',
 		link: '2',
 		views: ['/assets/illustrations/2.jpg'],
@@ -90,7 +89,7 @@ export const illustrations: ArtWork[] = [
 	{
 		title: '4',
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
-		date: '2000-01-01',
+		year: 2000,
 		preview: '/assets/illustrations/4.jpg',
 		link: '4',
 		views: ['/assets/illustrations/4.jpg'],
@@ -100,7 +99,7 @@ export const illustrations: ArtWork[] = [
 	{
 		title: '5',
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
-		date: '2000-01-01',
+		year: 2000,
 		preview: '/assets/illustrations/5.jpg',
 		link: '5',
 		views: ['/assets/illustrations/5.jpg'],
@@ -110,7 +109,7 @@ export const illustrations: ArtWork[] = [
 	{
 		title: '7',
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
-		date: '2000-01-01',
+		year: 2000,
 		preview: '/assets/illustrations/7.jpg',
 		link: '7',
 		views: ['/assets/illustrations/7.jpg'],
@@ -119,17 +118,8 @@ export const illustrations: ArtWork[] = [
 	},
 ];
 
-
 export const illustrationsByYear: ArtWorkByYear = illustrations
-    .reduce<ArtWorkByYear>((acc, illustration) => {
-        const year = new Date(illustration.date).getFullYear();
-        if (!acc[year]) {
-            acc[year] = [];
-        }
-        acc[year].push(illustration);
-        return acc;
-    }, {});
-
-Object.keys(illustrationsByYear).forEach((year) => {
-    illustrationsByYear[Number(year)].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-});
+	.reduce<ArtWorkByYear>((acc, illustration) => {
+		(acc[illustration.year] ||= []).push(illustration);
+		return acc;
+	}, {});

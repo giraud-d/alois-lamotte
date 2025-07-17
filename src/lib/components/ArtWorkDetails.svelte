@@ -1,9 +1,7 @@
 <script lang="ts">
     import type {ArtWork} from "$lib/models/ArtWork";
-    import {get, writable} from "svelte/store";
-    import {language} from "$lib/language";
+    import {writable} from "svelte/store";
     import {onMount} from 'svelte';
-    import {translations} from "$lib/data/translations";
 
     let {
         artWork,
@@ -17,26 +15,9 @@
         nextPage: () => void;
     } = $props();
 
-
     let currentViewIndex = $state(0);
     let containerRatio = writable('1/1');
     let imgElement: HTMLImageElement;
-
-    function formatDate(dateStr: string): string {
-        const lang = get(language);
-        const date = new Date(dateStr);
-
-        if (lang === 'fr') {
-            const months = translations.artWork.date.months.fr;
-            return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
-        } else {
-            return date.toLocaleDateString(lang, {
-                year: 'numeric',
-                month: 'long',
-            });
-        }
-    }
-
 
     function stopPropagation(e: MouseEvent) {
         e.stopPropagation();
@@ -107,7 +88,7 @@
     </div>
     <figcaption class="md:col-span-4 flex flex-col">
         <h1 class="text-2xl md:text-4xl font-medium mb-4">{artWork.title}</h1>
-        <time class="text-gray-600 mb-2">{formatDate(artWork.date)}</time>
+        <time class="text-gray-600 mb-2">{artWork.year}</time>
         <p class="text-gray-600 mb-2 italic">{artWork.technique}</p>
         <p class="text-gray-600 mb-4">{artWork.dimensions.height} × {artWork.dimensions.width} cm</p>
         <p class="text-base md:text-lg mb-8">{artWork.description}</p>
