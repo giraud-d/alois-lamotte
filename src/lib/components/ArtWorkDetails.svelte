@@ -18,6 +18,7 @@
     let currentViewIndex = $state(0);
     let containerRatio = writable('1/1');
     let imgElement: HTMLImageElement;
+    let touchStartX = 0;
 
     function stopPropagation(e: MouseEvent) {
         e.stopPropagation();
@@ -35,21 +36,45 @@
 
     function handleKeyDown(e: KeyboardEvent) {
         if (e.key === 'ArrowLeft') {
-            if (currentViewIndex > 0) {
-                currentViewIndex--;
-            } else {
-                previousPage();
-            }
+            handleToLeft();
         } else if (e.key === 'ArrowRight') {
-            if (currentViewIndex < artWork.views.length - 1) {
-                currentViewIndex++;
-            } else {
-                nextPage();
-            }
+            handleToRight();
         } else if (e.key === 'Escape' && isModalOpen) {
             closeModal();
         } else if ((e.key === 'Enter' || e.key === ' ') && !isModalOpen) {
             openModal();
+        }
+    }
+
+    function handleTouchStart(e: TouchEvent) {
+        touchStartX = e.touches[0].clientX;
+    }
+
+    function handleTouchEnd(e: TouchEvent) {
+        const touchEndX = e.changedTouches[0].clientX;
+        const diff = touchEndX - touchStartX;
+        const SWIPE_THRESHOLD = 40;
+
+        if (diff > SWIPE_THRESHOLD) {
+            handleToRight();
+        } else if (diff < -SWIPE_THRESHOLD) {
+            handleToLeft();
+        }
+    }
+
+    function handleToRight() {
+        if (currentViewIndex < artWork.views.length - 1) {
+            currentViewIndex++;
+        } else {
+            nextPage();
+        }
+    }
+
+    function handleToLeft() {
+        if (currentViewIndex > 0) {
+            currentViewIndex--;
+        } else {
+            previousPage();
         }
     }
 
@@ -67,7 +92,7 @@
     });
 </script>
 
-<svelte:window on:keydown={handleKeyDown} />
+<svelte:window on:keydown={handleKeyDown} ontouchstart={handleTouchStart} ontouchend={handleTouchEnd}/>
 
 <figure class="grid grid-cols-1 md:grid-cols-10 gap-4 md:gap-8">
     <div class="md:col-span-6">
