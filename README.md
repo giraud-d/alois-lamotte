@@ -1,8 +1,18 @@
-# sv
+# Alois Lamotte Website
+
+## Hook
+
+Husky hook on commit check prettier, eslint and svelte-kit
+
+## Deployment
+
+On every push on `main` Cloudflare deploys website on [this dev environnement page](https://alois-lamotte.pages.dev/)
+
+## Svelte basic documentation
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## Developing
+### Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
@@ -13,7 +23,7 @@ pnpm run dev
 pnpm run dev -- --open
 ```
 
-## Building
+### Building
 
 To create a production version of your app:
 
@@ -23,5 +33,3 @@ pnpm run preview
 ```
 
 You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
