@@ -1,34 +1,34 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-    //import { language, type Language } from '$lib/language';
-    import { t } from "$lib/data/translations";
+	//import { language, type Language } from '$lib/language';
+	import { t } from '$lib/data/translations';
 
 	let currentPath: string = $derived($page.url.pathname);
 	let isMenuOpen: boolean = $state(false);
 
 	const navs = [
 		{
-            titleKey: 'nav.home',
+			titleKey: 'nav.home',
 			href: '/home'
 		},
 		{
-            titleKey: 'nav.paintings',
+			titleKey: 'nav.paintings',
 			href: '/painting'
 		},
 		{
-            titleKey: 'nav.illustrations',
+			titleKey: 'nav.illustrations',
 			href: '/illustration'
 		},
-        {
-            titleKey: 'nav.projects',
-            href: '/project'
-        },
 		{
-            titleKey: 'nav.about',
+			titleKey: 'nav.projects',
+			href: '/project'
+		},
+		{
+			titleKey: 'nav.about',
 			href: '/about'
 		},
 		{
-            titleKey: 'nav.contact',
+			titleKey: 'nav.contact',
 			href: '/contact'
 		}
 	];
@@ -38,10 +38,10 @@
 		isMenuOpen = !isMenuOpen;
 	}
 
-    // Only french for now
-    // function toggleLanguage() {
-    //     language.update((l: Language) => l === 'fr' ? 'en' : 'fr');
-    // }
+	// Only french for now
+	// function toggleLanguage() {
+	//     language.update((l: Language) => l === 'fr' ? 'en' : 'fr');
+	// }
 </script>
 
 <nav class="bg-gray-800">
@@ -66,11 +66,7 @@
 						aria-hidden="true"
 						data-slot="icon"
 					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-						/>
+						<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 					</svg>
 					<svg
 						class={isMenuOpen ? 'block size-6' : 'hidden'}
@@ -91,27 +87,19 @@
 					<div class="flex space-x-4">
 						{#each navs as { titleKey, href }}
 							{#if href === currentPath || (href === '/home' && currentPath === '/')}
-								<a
-									{href}
-									title="{$t(titleKey)}"
-									class="text-md rounded-md bg-gray-900 px-3 py-2 font-medium text-white"
-									aria-current="page">{$t(titleKey)}</a
-								>
+								<a {href} title={$t(titleKey)} class="text-md rounded-md bg-gray-900 px-3 py-2 font-medium text-white" aria-current="page">{$t(titleKey)}</a>
 							{:else}
-								<a
-									{href}
-                                    title="{$t(titleKey)}"
-									class="text-md rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+								<a {href} title={$t(titleKey)} class="text-md rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
 									>{$t(titleKey)}</a
 								>
 							{/if}
 						{/each}
-<!--						<button-->
-<!--							class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors"-->
-<!--							onclick={toggleLanguage}-->
-<!--						>-->
-<!--							{$language === 'fr' ? 'EN' : 'FR'}-->
-<!--						</button>-->
+						<!--						<button-->
+						<!--							class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors"-->
+						<!--							onclick={toggleLanguage}-->
+						<!--						>-->
+						<!--							{$language === 'fr' ? 'EN' : 'FR'}-->
+						<!--						</button>-->
 					</div>
 				</div>
 			</div>
@@ -125,7 +113,7 @@
 					{#if href === currentPath}
 						<a
 							{href}
-                            title="{$t(titleKey)}"
+							title={$t(titleKey)}
 							class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
 							onclick={toggleMenu}
 							aria-current="page">{$t(titleKey)}</a
@@ -133,16 +121,16 @@
 					{:else}
 						<a
 							{href}
-                            title="{$t(titleKey)}"
+							title={$t(titleKey)}
 							class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
 							onclick={toggleMenu}>{$t(titleKey)}</a
 						>
 					{/if}
 				{/each}
-<!--				<button-->
-<!--					class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors" onclick={toggleLanguage}>-->
-<!--					{$language === 'fr' ? 'EN' : 'FR'}-->
-<!--				</button>-->
+				<!--				<button-->
+				<!--					class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors" onclick={toggleLanguage}>-->
+				<!--					{$language === 'fr' ? 'EN' : 'FR'}-->
+				<!--				</button>-->
 			</div>
 		</div>
 	{/if}

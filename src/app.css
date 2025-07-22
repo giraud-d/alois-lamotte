@@ -3,17 +3,27 @@
 @import 'tailwindcss/utilities';
 
 @view-transition {
-    navigation: auto;
+	navigation: auto;
 }
 
 @layer base {
-    :root {
-        --font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic';
-    }
+	:root {
+		--font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic';
+	}
 
-    html, h1, h2, h3, h4, h5, h6, p, a, button, span {
-        font-family: var(--font-family), sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
+	html,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	a,
+	button,
+	span {
+		font-family: var(--font-family), sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
 }

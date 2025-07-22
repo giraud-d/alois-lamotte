@@ -1,4 +1,4 @@
-import {type ArtWork, type ArtWorkByYear} from '$lib/models/ArtWork';
+import { type ArtWork, type ArtWorkByYear } from '$lib/models/ArtWork';
 
 export const paintings: ArtWork[] = [
 	{
@@ -26,7 +26,7 @@ export const paintings: ArtWork[] = [
 	{
 		title: 'Céleste',
 		description:
-			"Ce tableau entremêle deux souvenirs : un regard chargé de passion et l’image d’une lamelle de météorite observée au microscope. Les formes et les couleurs se superposent, évoquant à la fois l’infiniment petit et l’infiniment grand, le minéral et l’émotion. Entre abstraction et figuration, le regard apparaît et disparaît, comme une trace persistante dans la mémoire.\n",
+			'Ce tableau entremêle deux souvenirs : un regard chargé de passion et l’image d’une lamelle de météorite observée au microscope. Les formes et les couleurs se superposent, évoquant à la fois l’infiniment petit et l’infiniment grand, le minéral et l’émotion. Entre abstraction et figuration, le regard apparaît et disparaît, comme une trace persistante dans la mémoire.\n',
 		year: 2024,
 		preview: '/assets/paintings/celeste_main.png',
 		link: 'celeste',
@@ -69,9 +69,9 @@ export const paintings: ArtWork[] = [
 		title: 'Piégée',
 		description: 'La liberté chérie au travers d’une fenêtre à barreaux.',
 		year: 2024,
-		preview: '/assets/tmp-shapes.png',  // EMPTY
+		preview: '/assets/tmp-shapes.png', // EMPTY
 		link: '14-piegee',
-		views: ['/assets/tmp-shapes.png'],  // EMPTY
+		views: ['/assets/tmp-shapes.png'], // EMPTY
 		technique: 'Huile et acrylique sur toile',
 		dimensions: {
 			height: 0,
@@ -152,7 +152,11 @@ export const paintings: ArtWork[] = [
 		year: 2020,
 		preview: '/assets/paintings/toise-de-croissance_main.jpg',
 		link: '17-toise-de-croissance',
-		views: ['/assets/paintings/toise-de-croissance_main.jpg', '/assets/paintings/toise-de-croissance_detail-1.jpg', '/assets/paintings/toise-de-croissance_detail-2.jpg'],
+		views: [
+			'/assets/paintings/toise-de-croissance_main.jpg',
+			'/assets/paintings/toise-de-croissance_detail-1.jpg',
+			'/assets/paintings/toise-de-croissance_detail-2.jpg'
+		],
 		technique: 'Peinture acrylique sur mur',
 		dimensions: {
 			height: 0,
@@ -189,47 +193,49 @@ export const paintings: ArtWork[] = [
 		description:
 			"L'expérimentation a débuté enfant, je collectais de la sève d’abricotier pour y inventer des bijoux avec du branchage. En 2015, alors qu’elle s’écoulait du tronc sous une chaleur de plomb, l’idée me vint de la faire fondre sur un support et d’attendre qu’elle soit plus stable.",
 		year: 2015,
-		preview: '/assets/tmp-shapes.png',  // Empty
+		preview: '/assets/tmp-shapes.png', // Empty
 		link: 'ambree',
-		views: ['/assets/tmp-shapes.png'],  // Empty
+		views: ['/assets/tmp-shapes.png'], // Empty
 		technique: "Gomme d'abricotier avec acrylique sur bois",
 		dimensions: { height: 42, width: 30 }
 	},
 
 	{
 		title: '14',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim felis, mollis at nulla et, maximus blandit eros. Phasellus malesuada consequat odio nec feugiat. Duis dictum eleifend faucibus. Donec faucibus nisl ac turpis gravida, eu dapibus velit faucibus. Fusce condimentum. ',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim felis, mollis at nulla et, maximus blandit eros. Phasellus malesuada consequat odio nec feugiat. Duis dictum eleifend faucibus. Donec faucibus nisl ac turpis gravida, eu dapibus velit faucibus. Fusce condimentum. ',
 		year: 2000,
 		preview: '/assets/paintings/14.jpg',
 		link: '14',
 		views: ['/assets/paintings/14.jpg', '/assets/paintings/14.jpg', '/assets/paintings/14.jpg'],
 		technique: 'Huile sur toile',
-		dimensions: { height: 60, width: 40 },
+		dimensions: { height: 60, width: 40 }
 	},
 	{
 		title: '15',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim felis, mollis at nulla et, maximus blandit eros. Phasellus malesuada consequat odio nec feugiat. Duis dictum eleifend faucibus. Donec faucibus nisl ac turpis gravida, eu dapibus velit faucibus. Fusce condimentum. ',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim felis, mollis at nulla et, maximus blandit eros. Phasellus malesuada consequat odio nec feugiat. Duis dictum eleifend faucibus. Donec faucibus nisl ac turpis gravida, eu dapibus velit faucibus. Fusce condimentum. ',
 		year: 2000,
 		preview: '/assets/paintings/15.jpg',
 		link: '15',
 		views: ['/assets/paintings/15.jpg', '/assets/paintings/15.jpg', '/assets/paintings/15.jpg'],
 		technique: 'Huile sur toile',
-		dimensions: { height: 60, width: 40 },
+		dimensions: { height: 60, width: 40 }
 	},
 	{
 		title: '17',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim felis, mollis at nulla et, maximus blandit eros. Phasellus malesuada consequat odio nec feugiat. Duis dictum eleifend faucibus. Donec faucibus nisl ac turpis gravida, eu dapibus velit faucibus. Fusce condimentum. ',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim felis, mollis at nulla et, maximus blandit eros. Phasellus malesuada consequat odio nec feugiat. Duis dictum eleifend faucibus. Donec faucibus nisl ac turpis gravida, eu dapibus velit faucibus. Fusce condimentum. ',
 		year: 2000,
 		preview: '/assets/paintings/17.jpg',
 		link: '17',
 		views: ['/assets/paintings/17.jpg', '/assets/paintings/17.jpg', '/assets/paintings/17.jpg'],
 		technique: 'Huile sur toile',
-		dimensions: { height: 60, width: 40 },
-	},
+		dimensions: { height: 60, width: 40 }
+	}
 ];
 
-export const paintingsByYear: ArtWorkByYear = paintings
-	.reduce<ArtWorkByYear>((acc, painting) => {
-		(acc[painting.year] ||= []).push(painting);
-		return acc;
-	}, {});
+export const paintingsByYear: ArtWorkByYear = paintings.reduce<ArtWorkByYear>((acc, painting) => {
+	(acc[painting.year] ||= []).push(painting);
+	return acc;
+}, {});

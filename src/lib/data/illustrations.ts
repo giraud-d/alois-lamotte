@@ -1,4 +1,4 @@
-import {type ArtWork, type ArtWorkByYear} from '$lib/models/ArtWork';
+import { type ArtWork, type ArtWorkByYear } from '$lib/models/ArtWork';
 
 export const illustrations: ArtWork[] = [
 	{
@@ -9,7 +9,7 @@ export const illustrations: ArtWork[] = [
 		link: 'souvenir-de-juin',
 		views: ['/assets/illustrations/souvenir-de-juin_main.png'],
 		technique: 'Crayon de couleur',
-		dimensions: { height: 21, width: 14.8	} // format A5
+		dimensions: { height: 21, width: 14.8 } // format A5
 	},
 	{
 		title: 'Fading away',
@@ -40,7 +40,7 @@ export const illustrations: ArtWork[] = [
 		link: '4-aviateur-lion',
 		views: ['/assets/illustrations/l-aviateur-et-le-lion_main.jpg'],
 		technique: 'Acrylique et découpe papier sur A5',
-		dimensions: { height: 21, width: 14.8	} // format A5
+		dimensions: { height: 21, width: 14.8 } // format A5
 	},
 	{
 		title: 'Chou hibou',
@@ -50,7 +50,7 @@ export const illustrations: ArtWork[] = [
 		link: '2-chou-hibou',
 		views: ['/assets/illustrations/chou-hibou_main.png'],
 		technique: 'Staedler sur papier A0',
-		dimensions: {	height: 118.9, width: 84.1 } // format A0
+		dimensions: { height: 118.9, width: 84.1 } // format A0
 	},
 	{
 		title: 'Genèse inspiration de Matis',
@@ -68,58 +68,62 @@ export const illustrations: ArtWork[] = [
 
 	{
 		title: '1',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
 		year: 2000,
 		preview: '/assets/illustrations/1.jpg',
 		link: '1',
 		views: ['/assets/illustrations/1.jpg', '/assets/illustrations/1.jpg', '/assets/illustrations/1.jpg'],
 		technique: 'Huile sur toile',
-		dimensions: { height: 80, width: 60 },
+		dimensions: { height: 80, width: 60 }
 	},
 	{
 		title: '2',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
 		year: 2000,
 		preview: '/assets/illustrations/2.jpg',
 		link: '2',
 		views: ['/assets/illustrations/2.jpg'],
 		technique: 'Huile sur toile',
-		dimensions: { height: 80, width: 60 },
+		dimensions: { height: 80, width: 60 }
 	},
 	{
 		title: '4',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
 		year: 2000,
 		preview: '/assets/illustrations/4.jpg',
 		link: '4',
 		views: ['/assets/illustrations/4.jpg'],
 		technique: 'Huile sur toile',
-		dimensions: { height: 80, width: 60 },
+		dimensions: { height: 80, width: 60 }
 	},
 	{
 		title: '5',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
 		year: 2000,
 		preview: '/assets/illustrations/5.jpg',
 		link: '5',
 		views: ['/assets/illustrations/5.jpg'],
 		technique: 'Huile sur toile',
-		dimensions: { height: 80, width: 60 },
+		dimensions: { height: 80, width: 60 }
 	},
 	{
 		title: '7',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
 		year: 2000,
 		preview: '/assets/illustrations/7.jpg',
 		link: '7',
 		views: ['/assets/illustrations/7.jpg'],
 		technique: 'Huile sur toile',
-		dimensions: { height: 80, width: 60 },
-	},
+		dimensions: { height: 80, width: 60 }
+	}
 ];
 
-export const illustrationsByYear: ArtWorkByYear = illustrations
-	.reduce<ArtWorkByYear>((acc, illustration) => {
-		(acc[illustration.year] ||= []).push(illustration);
-		return acc;
-	}, {});
+export const illustrationsByYear: ArtWorkByYear = illustrations.reduce<ArtWorkByYear>((acc, illustration) => {
+	(acc[illustration.year] ||= []).push(illustration);
+	return acc;
+}, {});
