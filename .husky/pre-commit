@@ -1,2 +1,3 @@
 prettier --check .
 eslint .
+svelte-kit sync && svelte-check --tsconfig ./tsconfig.json

@@ -1,5 +1,6 @@
 <script lang="ts">
-	let { backgroundColor = 'bg-white', children } = $props();
+	import type { Snippet } from 'svelte';
+	let { backgroundColor = 'bg-white', children }: { backgroundColor?: string; children: Snippet<[]> } = $props();
 </script>
 
 <main class={backgroundColor}>

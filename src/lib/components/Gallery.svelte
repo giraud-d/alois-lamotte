@@ -27,7 +27,7 @@
 												<stop offset="100%" stop-color="#fff"></stop>
 											</linearGradient>
 										</defs>
-										<mask id="blobMask-{year}-{artWork.title}">
+										<mask x="-1%" y="-1%" id="blobMask-{year}-{artWork.title}">
 											<rect></rect>
 											<path>
 												<animate
@@ -95,8 +95,6 @@
 		fill: #fff;
 		width: 102%;
 		height: 102%;
-		x: -1%;
-		y: -1%;
 	}
 
 	.svgBlob:hover svg {
