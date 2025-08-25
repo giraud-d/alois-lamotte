@@ -1,12 +1,21 @@
 <script lang="ts">
 	import { t } from '$lib/data/translations';
+	import { onMount } from 'svelte';
+
 	import { type ArtWorkByYear, ArtWorkType } from '$lib/models/ArtWork';
 
 	export let artWorkType: ArtWorkType;
 	export let artWorksByYear: ArtWorkByYear;
+
+	let isSafariIOS = false;
+
+	onMount(() => {
+		const ua = navigator.userAgent;
+		isSafariIOS = /iP(ad|hone|od).+Version\/[\d.]+.*Safari/i.test(ua);
+	});
 </script>
 
-<main>
+<main class:fallback={isSafariIOS}>
 	<h1 class="pb-16 pt-2 text-center text-5xl font-medium">
 		{artWorkType === ArtWorkType.PAINTING ? $t('painting.title') : $t('illustration.title')}
 	</h1>
@@ -121,5 +130,23 @@
 		100% {
 			transform: translate(50%, 50%) scale(2.4) rotateZ(0deg);
 		}
+	}
+
+	/* CSS fallback - animation simple de rotation SVG pour Safari iOS */
+	@keyframes spin {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.fallback svg {
+		animation: spin 20s linear infinite !important;
+	}
+
+	.fallback path {
+		animation: none !important;
 	}
 </style>

@@ -49,12 +49,12 @@
 	function handleTouchEnd(e: TouchEvent) {
 		const touchEndX = e.changedTouches[0].clientX;
 		const diff = touchEndX - touchStartX;
-		const SWIPE_THRESHOLD = 200;
+		const SWIPE_THRESHOLD = 160;
 
 		if (diff > SWIPE_THRESHOLD) {
-			handleToRight();
-		} else if (diff < -SWIPE_THRESHOLD) {
 			handleToLeft();
+		} else if (diff < -SWIPE_THRESHOLD) {
+			handleToRight();
 		}
 	}
 
