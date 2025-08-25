@@ -20,10 +20,6 @@
 	let imgElement: HTMLImageElement;
 	let touchStartX = 0;
 
-	function stopPropagation(e: MouseEvent) {
-		e.stopPropagation();
-	}
-
 	function openModal() {
 		isModalOpen = true;
 		document.body.classList.add('modal-open');
@@ -53,7 +49,7 @@
 	function handleTouchEnd(e: TouchEvent) {
 		const touchEndX = e.changedTouches[0].clientX;
 		const diff = touchEndX - touchStartX;
-		const SWIPE_THRESHOLD = 40;
+		const SWIPE_THRESHOLD = 200;
 
 		if (diff > SWIPE_THRESHOLD) {
 			handleToRight();
@@ -122,16 +118,16 @@
 
 {#if isModalOpen}
 	<dialog class="modal-backdrop fixed inset-0 z-50 flex h-screen w-screen items-center justify-center bg-black" aria-modal="true" open>
-		<button
-			class="absolute right-2 top-2 p-2 text-4xl text-white transition-opacity hover:opacity-75 md:right-4 md:top-4 md:p-8 md:text-8xl"
-			onclick={closeModal}
-			aria-label="Fermer"
-		>
-			&times;
-		</button>
-		<button class="flex h-full w-full cursor-default items-center justify-center border-0 bg-black p-4" onclick={stopPropagation}>
+		<div class="flex h-full w-full cursor-default items-center justify-center border-0 bg-black p-4">
+			<button
+				class="absolute right-2 top-2 p-4 text-8xl text-white transition-opacity hover:opacity-75 md:right-4 md:top-4 md:p-8 md:text-8xl"
+				onclick={closeModal}
+				aria-label="Fermer"
+			>
+				&times;
+			</button>
 			<img src={artWork.views[currentViewIndex]} alt={artWork.title} class="max-h-[90vh] max-w-full object-contain" />
-		</button>
+		</div>
 	</dialog>
 {/if}
 

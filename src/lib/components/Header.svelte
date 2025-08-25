@@ -6,7 +6,7 @@
 </script>
 
 {#if !withoutName}
-	<header class="bg-gray-800 py-5 text-white">
+	<header class="hidden bg-gray-800 py-5 text-white md:block">
 		<a href="/">
 			<h1 class="text-center text-5xl font-bold">Aloïs Lamotte</h1>
 		</a>

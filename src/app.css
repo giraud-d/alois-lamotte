@@ -27,3 +27,16 @@
 		-moz-osx-font-smoothing: grayscale;
 	}
 }
+
+/* Hide vertical scrollbar */
+body::-webkit-scrollbar {
+	display: none;
+}
+/* Firefox */
+body {
+	scrollbar-width: none;
+}
+/* IE and Edge */
+.no-scrollbar {
+	-ms-overflow-style: none;
+}
