@@ -7,15 +7,17 @@
 	export let artWorkType: ArtWorkType;
 	export let artWorksByYear: ArtWorkByYear;
 
-	let isSafariIOS = false;
+	let isAppleWebKitBrowser = false;
 
 	onMount(() => {
 		const ua = navigator.userAgent;
-		isSafariIOS = /iP(ad|hone|od).+Version\/[\d.]+.*Safari/i.test(ua);
+		const isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.userAgent.includes('Mac') && 'ontouchend' in document);
+		const isSafari = /AppleWebKit/.test(ua) && !/Chrome|CriOS|FxiOS|OPiOS|EdgiOS/.test(ua);
+		isAppleWebKitBrowser = isIOS || isSafari;
 	});
 </script>
 
-<main class:fallback={isSafariIOS}>
+<main class:fallback={isAppleWebKitBrowser}>
 	<h1 class="pb-16 pt-2 text-center text-5xl font-medium">
 		{artWorkType === ArtWorkType.PAINTING ? $t('painting.title') : $t('illustration.title')}
 	</h1>
@@ -132,18 +134,33 @@
 		}
 	}
 
-	/* CSS fallback - animation simple de rotation SVG pour Safari iOS */
-	@keyframes spin {
-		from {
-			transform: rotate(0deg);
+	/* CSS fallback - animation simple de rotation SVG pour Apple webkit */
+	.fallback svg {
+		display: none !important;
+	}
+
+	.fallback .svgBlob {
+		border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+		overflow: hidden;
+		animation: morph 3s linear infinite;
+	}
+
+	@keyframes morph {
+		0%,
+		100% {
+			border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
 		}
-		to {
-			transform: rotate(360deg);
+		34% {
+			border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+		}
+		67% {
+			border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
 		}
 	}
 
-	.fallback svg {
-		animation: spin 20s linear infinite !important;
+	.fallback img {
+		display: block !important;
+		opacity: 1 !important;
 	}
 
 	.fallback path {
