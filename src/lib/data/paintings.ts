@@ -6,9 +6,9 @@ export const paintings: ArtWork[] = [
 		description:
 			'Avez-vous chez vous un objet qui vous fait penser à quelqu’un ? Qui vous évoque un souvenir précis dès l’instant où vous y posez le regard ? Ce bureau que l’on devine dans ce petit format en est empli. Ces souvenirs sont si prégnants qu’ils m’apparaissent comme des fantômes coincés dans une boucle de souvenir sans fin.',
 		year: 2025, // à adapter
-		preview: '/assets/paintings/mes-fantomes.jpg',
+		preview: 'https://pub-00ffec108168490eacb884798e37ebfd.r2.dev/mes-fantomes.jpg',
 		link: '18-mes-fantomes',
-		views: ['/assets/paintings/mes-fantomes.jpg'],
+		views: ['https://pub-00ffec108168490eacb884798e37ebfd.r2.dev/mes-fantomes.jpg'],
 		technique: 'Acrylique sur carton gris',
 		dimensions: { height: 15, width: 15 }
 	},

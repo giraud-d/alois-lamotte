@@ -8,6 +8,8 @@ Husky hook on commit check prettier, eslint and svelte-kit
 
 On every push on `main` Cloudflare deploys website on [this dev environnement page](https://alois-lamotte.pages.dev/)
 
+TODO : R2 doc for media
+
 ## Svelte basic documentation
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
