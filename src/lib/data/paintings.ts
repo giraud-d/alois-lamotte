@@ -23,13 +23,13 @@ export const paintings: ArtWork[] = [
 		description:
 			'Les corps se déhanchaient sous le rythme de la musique, une demi-pénombre régnait en ces lieux. Quelques spots, çà et là, venaient caresser ton visage. L’ambiance était festive, tout semblait s’animer autour de toi, pourtant ton regard était fermé, tu semblais en dehors de ce temps, perdu dans une profonde mélancolie d’une époque qui jamais plus ne reviendra.',
 		year: 2023,
-		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_main.png`,
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_main.jpg`,
 		link: 'discordance',
 		views: [
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_main.png`,
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_detail-1.png`,
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_detail-2.png`,
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_detail-3.png`
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_main.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_detail-1.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_detail-2.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_detail-3.jpg`
 		],
 		technique: 'Huile sur toile',
 		dimensions: { height: 60, width: 40 }
@@ -71,14 +71,14 @@ export const paintings: ArtWork[] = [
 		description:
 			'Le médium utilisé pour cette toile porte en lui un mystère. Issu du cellier de ma grand-mère, qui l’avait elle-même hérité de sa propre mère, il traverse les générations comme un fragment d’histoire familiale. C’est sur ce support chargé de mémoire que j’inscris mon souvenir, celui d’une rencontre marquante qui a profondément influencé ma pratique architecturale.',
 		year: 2025,
-		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_main.png`,
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_main.jpg`,
 		link: 'un-reflet-III',
 		views: [
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_main.png`,
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_detail-1.png`,
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_detail-2.png`,
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_detail-3.png`,
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_detail-4.png`
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_main.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_detail-1.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_detail-2.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_detail-3.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_detail-4.jpg`
 		],
 		technique: 'Huile sur toile',
 		dimensions: { height: 70, width: 50 }
@@ -88,13 +88,13 @@ export const paintings: ArtWork[] = [
 		description:
 			'Un souvenir de la rue des Foulons, la nuit est éclairée par la lune. Tel fut le tableau changeant au fil des saisons qu’offrait la fenêtre de ma chambre.',
 		year: 2019,
-		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_main.png`,
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_main.jpg`,
 		link: 'errance',
 		views: [
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_main.png`,
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_detail-1.png`,
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_detail-2.png`,
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_detail-3.png`
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_main.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_detail-1.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_detail-2.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_detail-3.jpg`
 		],
 		technique: 'Acrylique sur toile',
 		dimensions: {
@@ -106,12 +106,12 @@ export const paintings: ArtWork[] = [
 		title: 'Descendant',
 		description: 'Portraits de famille, une devinette sur l’avenir. ',
 		year: 2019,
-		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/descendant_main.png`,
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/descendant_main.jpg`,
 		link: 'descendant',
 		views: [
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/descendant_main.png`,
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/descendant_detail-1.png`,
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/descendantdetail-2.png`
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/descendant_main.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/descendant_detail-1.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/descendant_detail-2.jpg`
 		],
 		technique: 'Huile sur toile',
 		dimensions: {
@@ -124,9 +124,9 @@ export const paintings: ArtWork[] = [
 		description:
 			'Un soir d’été dans un bar suréclairé, les spots dansent sur ta peau. J’ai tenté de préserver ce souvenir en le peignant le lendemain à la lueur de la bougie pour ne révéler qu’à l’aube les couleurs que j’avaient peintes. ',
 		year: 2019,
-		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/thumos_main.png`,
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/thumos_main.jpg`,
 		link: 'thumos',
-		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/thumos_main.png`, `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/thumos_detail-1.png`],
+		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/thumos_main.jpg`, `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/thumos_detail-1.jpg`],
 		technique: 'Huile sur toile',
 		dimensions: {
 			height: 0,
@@ -138,9 +138,9 @@ export const paintings: ArtWork[] = [
 		title: 'Mask',
 		description: 'Tableau peint lors d’un moment charnière sur la définition de soi. La quête du soi, le moi en mouvement, qui sommes-nous ?',
 		year: 2013,
-		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/mask_main.png`,
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/mask_main.jpg`,
 		link: 'mask',
-		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/mask_main.png`, `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/mask_detail-1.png`],
+		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/mask_main.jpg`, `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/mask_detail-1.jpg`],
 		technique: 'Acrylique et plâtre',
 		dimensions: {
 			height: 0,
