@@ -2,7 +2,6 @@
 	import { page } from '$app/stores';
 	import type { ArtWork, ArtWorkType } from '$lib/models/ArtWork';
 	import ArtWorkDetails from '$lib/components/ArtWorkDetails.svelte';
-	import Main from '$lib/components/Main.svelte';
 	import { t } from '$lib/data/translations';
 
 	export let artWorkType: ArtWorkType;
@@ -26,42 +25,45 @@
 	}
 </script>
 
-<header class="border-b px-8 py-4">
-	<div class="mx-auto max-w-7xl">
-		<a href="/{artWorkType}" class="text-xl text-black transition-opacity hover:opacity-75"> ← Retour à la galerie </a>
-	</div>
-</header>
-
-<Main>
-	<div class="flex flex-col">
+<div class="flex min-h-screen flex-col">
+	<header class="border-b border-gray-400 bg-gray-100 px-8 py-4">
+		<div class="mx-auto max-w-7xl">
+			<a href="/{artWorkType}" class="text-xl text-black transition-opacity hover:opacity-75"> ← Retour à la galerie </a>
+		</div>
+	</header>
+	<section class="container mx-auto flex-1">
 		{#if artWork}
-			<section class="flex-grow p-8 text-black">
+			<div class="flex-grow p-8 text-black">
 				<ArtWorkDetails {artWork} previousPage={goToPreviousPage} nextPage={goToNextPage} />
-				<div class="mx-auto mt-8 flex max-w-7xl flex-col space-y-4 sm:flex-row sm:justify-between sm:space-y-0">
-					{#if prevArtWork}
-						<a
-							href="/{artWorkType}/{prevArtWork.link}"
-							class="text-xl text-black transition-opacity hover:opacity-75"
-							aria-label={$t('artWork.navigation.previous')}
-						>
-							← {prevArtWork.title}
-						</a>
-					{/if}
-					{#if nextArtWork}
-						<a
-							href="/{artWorkType}/{nextArtWork.link}"
-							class="ml-auto text-xl text-black transition-opacity hover:opacity-75"
-							aria-label={$t('artWork.navigation.next')}
-						>
-							{nextArtWork.title} →
-						</a>
-					{/if}
-				</div>
-			</section>
+			</div>
 		{:else}
-			<div class="flex flex-grow items-center justify-center text-black">
-				<p>{$t('artWork.navigation.notFound')}</p>
+			<div class="flex flex-grow items-center justify-center text-lg text-black">
+				<p>{$t('artWork.notFound')}</p>
 			</div>
 		{/if}
-	</div>
-</Main>
+	</section>
+	{#if artWork}
+		<section class="border-t border-gray-400 bg-gray-100 pb-8">
+			<div class="mx-auto mt-8 flex max-w-7xl flex-col space-y-4 sm:flex-row sm:justify-between sm:space-y-0">
+				{#if prevArtWork}
+					<a
+						href="/{artWorkType}/{prevArtWork.link}"
+						class="text-xl text-black transition-opacity hover:opacity-75"
+						aria-label={$t('artWork.navigation.previous')}
+					>
+						← {prevArtWork.title}
+					</a>
+				{/if}
+				{#if nextArtWork}
+					<a
+						href="/{artWorkType}/{nextArtWork.link}"
+						class="ml-auto text-xl text-black transition-opacity hover:opacity-75"
+						aria-label={$t('artWork.navigation.next')}
+					>
+						{nextArtWork.title} →
+					</a>
+				{/if}
+			</div>
+		</section>
+	{/if}
+</div>

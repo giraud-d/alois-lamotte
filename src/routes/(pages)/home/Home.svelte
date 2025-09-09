@@ -5,7 +5,7 @@
 </script>
 
 <main>
-	<section class="container mx-auto px-5">
+	<section class="container mx-auto px-5 pt-2">
 		<h1 class="text-center text-5xl font-medium">Bienvenue !</h1>
 	</section>
 

@@ -102,7 +102,9 @@
 		<h1 class="mb-4 text-2xl font-medium md:text-4xl">{artWork.title}</h1>
 		<time class="mb-2 text-gray-600">{artWork.year}</time>
 		<p class="mb-2 italic text-gray-600">{artWork.technique}</p>
-		<p class="mb-4 text-gray-600">{artWork.dimensions.height} × {artWork.dimensions.width} cm</p>
+		{#if artWork.dimensions.height > 0}
+			<p class="mb-4 text-gray-600">{artWork.dimensions.height} × {artWork.dimensions.width} cm</p>
+		{/if}
 		<p class="mb-8 text-base md:text-lg">{artWork.description}</p>
 		{#if artWork.views.length > 1}
 			<div class="flex gap-2 overflow-x-auto pb-4 pt-4 md:gap-4">
