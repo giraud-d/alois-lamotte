@@ -3,16 +3,69 @@ import { PUBLIC_STATIC_ASSET_BASE_URL } from '$env/static/public';
 
 export const paintings: ArtWork[] = [
 	{
-		title: 'Mes fantômes',
+		title: 'Bitter',
 		description:
-			'Avez-vous chez vous un objet qui vous fait penser à quelqu’un ? Qui vous évoque un souvenir précis dès l’instant où vous y posez le regard ? Ce bureau que l’on devine dans ce petit format en est empli. Ces souvenirs sont si prégnants qu’ils m’apparaissent comme des fantômes coincés dans une boucle de souvenir sans fin.',
-		year: 2025, // à adapter
-		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/mes-fantomes.jpg`,
-		link: '18-mes-fantomes',
-		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/mes-fantomes.jpg`],
-		technique: 'Acrylique sur carton gris',
-		dimensions: { height: 15, width: 15 }
+			'Il fait chaud ce jour-là, pour se désaltérer, il se sert un verre de Campari Tonic, les mixtures dansent, virevoltent et se transforment sous le prisme de la forme.',
+		year: 2020,
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/bitter_main.jpg`,
+		link: 'bitter',
+		views: [
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/bitter_main.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/bitter_detail-1.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/bitter_detail-2.jpg`
+		],
+		technique: 'Peinture à l’huile sur toile',
+		dimensions: { height: 70, width: 70 }
 	},
+	// 2 Esprit Embrumé,2020
+	{
+		title: 'Discordance',
+		description:
+			'Les corps se déhanchaient sous le rythme de la musique, une demi-pénombre régnait en ces lieux. Quelques spots, çà et là, venaient caresser ton visage. L’ambiance était festive, tout semblait s’animer autour de toi, pourtant ton regard était fermé, tu semblais en dehors de ce temps, perdu dans une profonde mélancolie d’une époque qui jamais plus ne reviendra.',
+		year: 2023,
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_main.png`,
+		link: 'discordance',
+		views: [
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_main.png`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_detail-1.png`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_detail-2.png`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_detail-3.png`
+		],
+		technique: 'Huile sur toile',
+		dimensions: { height: 60, width: 40 }
+	},
+	// 4 Une idée au loin dans le tumulte du quotidien 2023
+	// 7 Levée du rideau de brume 2024
+	// 6 Elévation 2024
+	// 8 Un reflet I 2024
+	// 9 Un reflet II
+	// 10 Ambrée 2015-2024
+	// 11 Celeste 2024
+	{
+		title: 'Celeste II',
+		description:
+			'Ce tableau entremêle deux souvenirs : un regard chargé de passion et l’image d’une lamelle de météorite observée au microscope. Les formes et les couleurs se superposent, évoquant à la fois l’infiniment petit et l’infiniment grand, le minéral et l’émotion. Entre abstraction et figuration, le regard apparaît et disparaît, comme une trace persistante dans la mémoire.',
+		year: 2025,
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/celeste-II_main.jpg`,
+		link: 'celest-III',
+		views: [
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/celeste-II_main.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/celeste-II_detail-1.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/celeste-II_detail-2.jpg`
+		],
+		technique: 'Acrylique, papier sur toile',
+		dimensions: { height: 80, width: 80 }
+	},
+	// Immergé, 2019
+	// Fading away, 2023
+	// Toise de croissance 2020.
+	// Mes fantômes 2025
+	// Genèse inspiration de Matis
+	//  Illustration Chou hibou 2014
+	// Les cimes 2023
+	// Souvenir juin 2024
+	// L’aviateur et le lion 2016
+	// Illustration birth or death 2023
 	{
 		title: 'Un reflet III',
 		description:
@@ -20,9 +73,93 @@ export const paintings: ArtWork[] = [
 		year: 2025,
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_main.png`,
 		link: 'un-reflet-III',
-		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_main.png`],
+		views: [
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_main.png`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_detail-1.png`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_detail-2.png`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_detail-3.png`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_detail-4.png`
+		],
 		technique: 'Huile sur toile',
 		dimensions: { height: 70, width: 50 }
+	},
+	{
+		title: 'Errance',
+		description:
+			'Un souvenir de la rue des Foulons, la nuit est éclairée par la lune. Tel fut le tableau changeant au fil des saisons qu’offrait la fenêtre de ma chambre.',
+		year: 2019,
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_main.png`,
+		link: 'errance',
+		views: [
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_main.png`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_detail-1.png`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_detail-2.png`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_detail-3.png`
+		],
+		technique: 'Acrylique sur toile',
+		dimensions: {
+			height: 0,
+			width: 0
+		} // dimensions non précisées
+	},
+	{
+		title: 'Descendant',
+		description: 'Portraits de famille, une devinette sur l’avenir. ',
+		year: 2019,
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/descendant_main.png`,
+		link: 'descendant',
+		views: [
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/descendant_main.png`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/descendant_detail-1.png`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/descendantdetail-2.png`
+		],
+		technique: 'Huile sur toile',
+		dimensions: {
+			height: 0,
+			width: 0
+		} // dimensions non précisées
+	},
+	{
+		title: 'Thumos',
+		description:
+			'Un soir d’été dans un bar suréclairé, les spots dansent sur ta peau. J’ai tenté de préserver ce souvenir en le peignant le lendemain à la lueur de la bougie pour ne révéler qu’à l’aube les couleurs que j’avaient peintes. ',
+		year: 2019,
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/thumos_main.png`,
+		link: 'thumos',
+		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/thumos_main.png`, `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/thumos_detail-1.png`],
+		technique: 'Huile sur toile',
+		dimensions: {
+			height: 0,
+			width: 0
+		} // dimensions non précisées
+	},
+	// Untitled 2025
+	{
+		title: 'Mask',
+		description: 'Tableau peint lors d’un moment charnière sur la définition de soi. La quête du soi, le moi en mouvement, qui sommes-nous ?',
+		year: 2013,
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/mask_main.png`,
+		link: 'mask',
+		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/mask_main.png`, `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/mask_detail-1.png`],
+		technique: 'Acrylique et plâtre',
+		dimensions: {
+			height: 0,
+			width: 0
+		} // dimensions non précisées
+	}
+	// Illustration
+
+	/*
+	{
+		title: 'Mes fantômes',
+		description:
+			'Avez-vous chez vous un objet qui vous fait penser à quelqu’un ? Qui vous évoque un souvenir précis dès l’instant où vous y posez le regard ? Ce bureau que l’on devine dans ce petit format en est empli. Ces souvenirs sont si prégnants qu’ils m’apparaissent comme des fantômes coincés dans une boucle de souvenir sans fin.',
+		year: 2025, // à adapter
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/mes-fantomes.jpg`,
+		link: '18-mes-fantomes',
+		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/mes-fantomes.jpg`],
+		technique: 'Acrylique sur carton gris',
+		dimensions: { height: 15, width: 15 }
 	},
 	{
 		title: 'Céleste',
@@ -105,17 +242,6 @@ export const paintings: ArtWork[] = [
 		} // dimensions non précisées
 	},
 	{
-		title: 'Discordance',
-		description:
-			'Les corps se déhanchaient sous le rythme de la musique, une demi-pénombre régnait en ces lieux. Quelques spots, çà et là, venaient caresser ton visage. L’ambiance était festive, tout semblait s’animer autour de toi, pourtant ton regard était fermé, tu semblais en dehors de ce temps, perdu dans une profonde mélancolie d’une époque qui jamais plus ne reviendra.',
-		year: 2023,
-		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_main.png`,
-		link: 'discordance',
-		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_main.png`],
-		technique: 'Huile sur toile',
-		dimensions: { height: 60, width: 40 }
-	},
-	{
 		title: 'Une idée au loin dans le tumulte du quotidien',
 		description: "Ci-gît la cristallisation d’une idée fixe au loin. Un but dont le parcours est semé d'embûches.",
 		year: 2023,
@@ -124,17 +250,6 @@ export const paintings: ArtWork[] = [
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/tmp-shapes.png`], // Empty
 		technique: 'Huile et mycelium sur grain de millet collé sur toile',
 		dimensions: { height: 60, width: 50 }
-	},
-	{
-		title: 'Bitter',
-		description:
-			'Il fait chaud ce jour-là, pour se désaltérer, il se sert un verre de Campari Tonic, les mixtures dansent, virevoltent et se transforment sous le prisme de la forme.',
-		year: 2020,
-		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/bitter_main.jpg`,
-		link: 'bitter',
-		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/bitter_main.jpg`],
-		technique: 'Peinture à l’huile sur toile',
-		dimensions: { height: 70, width: 70 }
 	},
 	{
 		title: 'Esprit Embrumé',
@@ -149,7 +264,7 @@ export const paintings: ArtWork[] = [
 	{
 		title: 'Toise de croissance',
 		description:
-			'Entre deux confinements, j’ai voulu faire pousser un arbre dans la maison. Un arbre pour grimper, rêver, s’évader. Une cabane tout en haut comme repaire secret, et une échelle pour suivre les enfants qui grandissent. Dans les branches, j’ai caché des animaux : un petit jeu à deux, pour apprendre leurs noms et inventer des histoires au fil du temps.',
+			'Entre deux confinements, j’ai voulu faire pousser un arbre dans la maison. Un arbre pour grimper, rêver, s’évader. Une cabane tout en haut comme repaire secret, et une échelle pour suivre les enfants qui grandissent. Dans les branches, j’ai caché des animaux: un petit jeu à deux, pour apprendre leurs noms et inventer des histoires au fil du temps.',
 		year: 2020,
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/toise-de-croissance_main.jpg`,
 		link: '17-toise-de-croissance',
@@ -174,20 +289,6 @@ export const paintings: ArtWork[] = [
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/submergee_main.jpg`],
 		technique: 'Acrylique sur toile, broderie et chutes de tissus',
 		dimensions: { height: 50, width: 40 }
-	},
-	{
-		title: 'Errance',
-		description:
-			'Un souvenir de la rue des Foulons, la nuit est éclairée par la lune. Tel fut le tableau changeant au fil des saisons qu’offrait la fenêtre de ma chambre.',
-		year: 2019,
-		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_main.png`,
-		link: '13-errance',
-		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_main.png`],
-		technique: 'Acrylique sur toile',
-		dimensions: {
-			height: 0,
-			width: 0
-		} // dimensions non précisées
 	},
 	{
 		title: 'Ambrée',
@@ -246,6 +347,7 @@ export const paintings: ArtWork[] = [
 		technique: 'Huile sur toile',
 		dimensions: { height: 60, width: 40 }
 	}
+	*/
 ];
 
 export const paintingsByYear: ArtWorkByYear = paintings.reduce<ArtWorkByYear>((acc, painting) => {
