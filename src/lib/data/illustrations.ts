@@ -1,13 +1,14 @@
 import { type ArtWork, type ArtWorkByYear } from '$lib/models/ArtWork';
+import { PUBLIC_STATIC_ASSET_BASE_URL } from '$env/static/public';
 
 export const illustrations: ArtWork[] = [
 	{
 		title: 'Souvenir de juin',
 		description: '', // description absente
 		year: 2024,
-		preview: '/assets/illustrations/souvenir-de-juin_main.png',
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/souvenir-de-juin_main.png`,
 		link: 'souvenir-de-juin',
-		views: ['/assets/illustrations/souvenir-de-juin_main.png'],
+		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/souvenir-de-juin_main.png`],
 		technique: 'Crayon de couleur',
 		dimensions: { height: 21, width: 14.8 } // format A5
 	},
@@ -16,9 +17,9 @@ export const illustrations: ArtWork[] = [
 		description:
 			'J’ai toujours eu du mal à appréhender mes émotions et mes relations – avec mes amis, ma famille, mes amants. Pour y voir plus clair, j’ai construit une demeure mentale : une réplique de la maison de mes grands-parents, où chaque pièce incarne un pan de mes liens aux autres. Le salon accueille mes amis proches, la terrasse mes connaissances. Le bureau abrite mes amours passés, tandis que la cuisine fige mes grands-parents dans un petit-déjeuner éternel depuis le départ de ma grand-mère en 2020. Seule ma fille, en dehors de moi, peut circuler librement dans cette demeure figée. Dans la première chambre, le reste de ma famille ; dans la seconde, mes amours présents. Cette illustration représente cette dernière. Elle retranscrit un rêve où un amour passé devient souvenir, s’effaçant peu à peu au contact de la réalité. Sous le lit, des boîtes s’empilent, symbolisant ces souvenirs douloureux que l’on tente d’enfouir au plus profond de sa conscience.',
 		year: 2023,
-		preview: '/assets/illustrations/fading-away_main.jpg',
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/fading-away_main.jpg`,
 		link: 'fading-away',
-		views: ['/assets/illustrations/fading-away_main.jpg'],
+		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/fading-away_main.jpg`],
 		technique: 'Technique mixte, Staedler, colorisation numérique',
 		dimensions: { height: 29.7, width: 21 } // format A4
 	},
@@ -26,9 +27,9 @@ export const illustrations: ArtWork[] = [
 		title: 'Birth or death',
 		description: 'Les bananes seins, hommages à ces bananes scotchées aux murs',
 		year: 2023,
-		preview: '/assets/illustrations/birth-and-death_main.jpg',
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/birth-and-death_main.jpg`,
 		link: 'birth-or-death',
-		views: ['/assets/illustrations/birth-and-death_main.jpg'],
+		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/birth-and-death_main.jpg`],
 		technique: 'Technique mixte, acrylique, feutre et numérique. Format A4',
 		dimensions: { height: 21, width: 29.7 } // format A4
 	},
@@ -36,9 +37,9 @@ export const illustrations: ArtWork[] = [
 		title: 'L’aviateur et le lion',
 		description: 'Une aventure qui tourne au vinaigre ?',
 		year: 2016,
-		preview: '/assets/illustrations/l-aviateur-et-le-lion_main.jpg',
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/l-aviateur-et-le-lion_main.jpg`,
 		link: '4-aviateur-lion',
-		views: ['/assets/illustrations/l-aviateur-et-le-lion_main.jpg'],
+		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/l-aviateur-et-le-lion_main.jpg`],
 		technique: 'Acrylique et découpe papier sur A5',
 		dimensions: { height: 21, width: 14.8 } // format A5
 	},
@@ -46,9 +47,9 @@ export const illustrations: ArtWork[] = [
 		title: 'Chou hibou',
 		description: '', // description absente
 		year: 2014,
-		preview: '/assets/illustrations/chou-hibou_main.png',
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/chou-hibou_main.png`,
 		link: '2-chou-hibou',
-		views: ['/assets/illustrations/chou-hibou_main.png'],
+		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/chou-hibou_main.png`],
 		technique: 'Staedler sur papier A0',
 		dimensions: { height: 118.9, width: 84.1 } // format A0
 	},
@@ -56,9 +57,9 @@ export const illustrations: ArtWork[] = [
 		title: 'Genèse inspiration de Matis',
 		description: '', // description absente
 		year: 2010,
-		preview: '/assets/illustrations/genese-inspiration-de-matis_main.png',
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/genese-inspiration-de-matis_main.png`,
 		link: 'genese-inspiration-de-matis',
-		views: ['/assets/illustrations/genese-inspiration-de-matis_main.png'],
+		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/genese-inspiration-de-matis_main.png`],
 		technique: 'Acrylique sur dos de papier peint',
 		dimensions: {
 			height: 0,
@@ -71,9 +72,13 @@ export const illustrations: ArtWork[] = [
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
 		year: 2000,
-		preview: '/assets/illustrations/1.jpg',
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/1.jpg`,
 		link: '1',
-		views: ['/assets/illustrations/1.jpg', '/assets/illustrations/1.jpg', '/assets/illustrations/1.jpg'],
+		views: [
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/1.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/1.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/1.jpg`
+		],
 		technique: 'Huile sur toile',
 		dimensions: { height: 80, width: 60 }
 	},
@@ -82,9 +87,9 @@ export const illustrations: ArtWork[] = [
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
 		year: 2000,
-		preview: '/assets/illustrations/2.jpg',
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/2.jpg`,
 		link: '2',
-		views: ['/assets/illustrations/2.jpg'],
+		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/2.jpg`],
 		technique: 'Huile sur toile',
 		dimensions: { height: 80, width: 60 }
 	},
@@ -93,9 +98,9 @@ export const illustrations: ArtWork[] = [
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
 		year: 2000,
-		preview: '/assets/illustrations/4.jpg',
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/4.jpg`,
 		link: '4',
-		views: ['/assets/illustrations/4.jpg'],
+		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/4.jpg`],
 		technique: 'Huile sur toile',
 		dimensions: { height: 80, width: 60 }
 	},
@@ -104,9 +109,9 @@ export const illustrations: ArtWork[] = [
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
 		year: 2000,
-		preview: '/assets/illustrations/5.jpg',
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/5.jpg`,
 		link: '5',
-		views: ['/assets/illustrations/5.jpg'],
+		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/5.jpg`],
 		technique: 'Huile sur toile',
 		dimensions: { height: 80, width: 60 }
 	},
@@ -115,9 +120,9 @@ export const illustrations: ArtWork[] = [
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor, dui id vulputate viverra, lectus orci faucibus lacus, a facilisis metus urna eu lectus. Nulla vitae gravida justo, quis consectetur.',
 		year: 2000,
-		preview: '/assets/illustrations/7.jpg',
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/7.jpg`,
 		link: '7',
-		views: ['/assets/illustrations/7.jpg'],
+		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/7.jpg`],
 		technique: 'Huile sur toile',
 		dimensions: { height: 80, width: 60 }
 	}
