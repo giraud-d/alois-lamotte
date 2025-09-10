@@ -20,14 +20,14 @@
 		</p>
 	</section>
 
-	<Wave color="#d1d5db" towardsBottom={false} />
-	<div class="bg-gray-300">
+	<Wave color="#f3f4f6" towardsBottom={false} />
+	<div class="bg-gray-100">
 		<section class="container mx-auto px-5 py-8">
 			<h3 class="pb-8 text-2xl">A la une</h3>
 			<ArtWorkDetails artWork={paintings[0]} previousPage={() => undefined} nextPage={() => undefined} />
 		</section>
 	</div>
-	<Wave color="#d1d5db" />
+	<Wave color="#f3f4f6" />
 
 	<section class="container mx-auto px-5 py-8">
 		<h3 class="pb-16 text-2xl">Venez découvrir toutes mes réalisations :</h3>

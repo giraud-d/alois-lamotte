@@ -26,7 +26,7 @@
 </script>
 
 <div class="flex min-h-screen flex-col">
-	<header class="border-b border-gray-400 bg-gray-100 px-8 py-4">
+	<header class="bg-gray-100 px-8 py-4">
 		<div class="mx-auto max-w-7xl">
 			<a href="/{artWorkType}" class="text-xl text-black transition-opacity hover:opacity-75"> ← Retour à la galerie </a>
 		</div>
@@ -43,7 +43,7 @@
 		{/if}
 	</section>
 	{#if artWork}
-		<section class="border-t border-gray-400 bg-gray-100 pb-8">
+		<section class=" bg-gray-100 pb-8">
 			<div class="mx-auto mt-8 flex max-w-7xl flex-col space-y-4 sm:flex-row sm:justify-between sm:space-y-0">
 				{#if prevArtWork}
 					<a
