@@ -22,3 +22,4 @@ vite.config.ts.timestamp-*
 # Image Optimization
 static/assets/illustrations
 static/assets/paintings
+static/assets/projects

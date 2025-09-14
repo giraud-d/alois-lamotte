@@ -1,11 +1,16 @@
 <script lang="ts">
 	import Main from '$lib/components/Main.svelte';
+	import { PUBLIC_STATIC_ASSET_BASE_URL } from '$env/static/public';
 </script>
 
 <Main>
 	<div class="flex flex-col items-center gap-4 p-4 sm:flex-row md:gap-x-8 md:p-8 lg:items-start">
 		<figure class="basis-full sm:basis-1/2 lg:basis-2/5 2xl:basis-1/3">
-			<img src="/assets/paintings/perception_main.jpg" alt="Aloïs Lamotte" class="h-auto w-full rounded-2xl object-cover" />
+			<img
+				src={`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/perception_main.jpg`}
+				alt="Auto portrait d'Aloïs Lamotte"
+				class="h-auto w-full rounded-2xl object-cover"
+			/>
 		</figure>
 		<section class="basis-full sm:basis-1/2 lg:basis-3/5 2xl:basis-2/3">
 			<h1 class="pb-8 pt-2 text-center text-3xl font-medium sm:pb-16 sm:text-5xl">A propos de moi</h1>

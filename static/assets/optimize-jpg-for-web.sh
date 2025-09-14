@@ -11,6 +11,9 @@ OUTPUT_PAINTINGS="${BASE_DIR}/paintings"
 INPUT_ILLUSTRATIONS="${BASE_DIR}/import-illustrations"
 OUTPUT_ILLUSTRATIONS="${BASE_DIR}/illustrations"
 
+INPUT_PROJECTS="${BASE_DIR}/import-projects"
+OUTPUT_PROJECTS="${BASE_DIR}/projects"
+
 # Pick ImageMagick binary (IM v7: magick, IM v6: convert)
 if command -v magick >/dev/null 2>&1; then
   IM="magick"
@@ -49,10 +52,10 @@ process_folder() {
   | xargs -0 -P "$(nproc)" -n 50 jpegoptim --strip-all --preserve --quiet
 }
 
-# Run for paintings
 process_folder "$INPUT_PAINTINGS" "$OUTPUT_PAINTINGS"
 
-# Run for illustrations
 process_folder "$INPUT_ILLUSTRATIONS" "$OUTPUT_ILLUSTRATIONS"
+
+process_folder "$INPUT_PROJECTS" "$OUTPUT_PROJECTS"
 
 echo "All done."

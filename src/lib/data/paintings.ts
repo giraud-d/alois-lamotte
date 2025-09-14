@@ -223,9 +223,9 @@ export const paintings: ArtWork[] = [
 	},
 	{
 		title: 'Perception',
-		description: '',
+		description: 'Auto portrait',
 		year: 2019,
-		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/descendant_preview.jpg`,
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/perception_preview.jpg`,
 		link: 'perception',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/perception_main.jpg`, `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/perception_detail-1.jpg`],
 		technique: 'Huile sur toile',
