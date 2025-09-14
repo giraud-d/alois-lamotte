@@ -2,6 +2,7 @@
 	import Header from '$lib/components/Header.svelte';
 	import '../../app.css';
 	import { page } from '$app/stores';
+	import Footer from '$lib/components/Footer.svelte';
 
 	let { children } = $props();
 
@@ -14,3 +15,7 @@
 {/if}
 
 {@render children()}
+
+{#if !isPaintingPage && !isIllustrationPage}
+	<Footer />
+{/if}
