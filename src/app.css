@@ -8,7 +8,7 @@
 
 @layer base {
 	:root {
-		--font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic';
+		--font-family: 'Montserrat', 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
 	}
 
 	html,
