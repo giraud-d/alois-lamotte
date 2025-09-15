@@ -17,15 +17,25 @@
 	});
 </script>
 
+<svelte:head>
+	<title>{artWorkType === ArtWorkType.PAINTING ? $t('paintings.title') : $t('illustrations.title')} - Aloïs Lamotte</title>
+	<meta
+		name="description"
+		content="Gallerie représentation toutes les {artWorkType === ArtWorkType.PAINTING
+			? $t('paintings.title')
+			: $t('illustrations.title')} de l'artiste Aloïs Lamotte"
+	/>
+</svelte:head>
+
 <main class:fallback={isAppleWebKitBrowser} class="container mx-auto">
 	<h1 class="pb-16 pt-2 text-center text-5xl font-medium">
-		{artWorkType === ArtWorkType.PAINTING ? $t('painting.title') : $t('illustration.title')}
+		{artWorkType === ArtWorkType.PAINTING ? $t('paintings.title') : $t('illustrations.title')}
 	</h1>
 
 	{#each Object.keys(artWorksByYear).sort((a, b) => Number(b) - Number(a)) as year}
 		<div class="mb-16">
 			<div class="mx-auto max-w-[1800px] px-4">
-				<h2 class="m-8 text-3xl font-medium">{year}</h2>
+				<h2 class="m-8 text-2xl font-semibold">{year}</h2>
 				<div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
 					{#each artWorksByYear[Number(year)] as artWork}
 						<div class="flex w-full items-center justify-center">

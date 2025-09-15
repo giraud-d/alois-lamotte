@@ -2,6 +2,11 @@
 	import { PUBLIC_STATIC_ASSET_BASE_URL } from '$env/static/public';
 </script>
 
+<svelte:head>
+	<title>Projets - Aloïs Lamotte</title>
+	<meta name="description" content="Page recensent divers projets de l'artiste Aloïs Lamotte" />
+</svelte:head>
+
 <main>
 	<section class="container mx-auto px-5 pt-2">
 		<h1 class="mb-8 text-center text-5xl font-medium">Mes projets</h1>
@@ -10,7 +15,7 @@
 	<div class="px-5 py-8 lg:container lg:mx-auto">
 		<div class="columns-1 gap-8 space-y-8 xl:columns-2">
 			<article id="scenographie-musee-prehistoire" class="break-inside-avoid overflow-hidden rounded-2xl bg-gray-50 p-5 shadow-md">
-				<h3 class="mb-3 text-xl font-semibold">Scénographie pour le musé de la préhistoire :</h3>
+				<h2 class="mb-3 text-xl font-semibold">Scénographie pour le musé de la préhistoire :</h2>
 				<div class="mb-8 flex flex-col items-center gap-2 p-2 sm:flex-row md:gap-x-4 md:p-4">
 					<figure class="xs:max-h-2 basis-full sm:max-h-none sm:basis-1/3 md:basis-2/5 xl:basis-1/2">
 						<img
@@ -55,7 +60,7 @@
 			</article>
 
 			<article id="animation-video" class="break-inside-avoid overflow-hidden rounded-2xl bg-gray-50 p-5 shadow-md">
-				<h3 class="mb-3 text-xl font-semibold">Animation de la vidéo :</h3>
+				<h2 class="mb-3 text-xl font-semibold">Animation de la vidéo :</h2>
 				<p class="mt-10">
 					Un court métrage réalisé en partenariat avec le festival Débord de Loire dans le cadre du studio de projet Architecture en Représentation à l'Ensa
 					Nantes. Réalisation du Story Board, des illustrations, du montage vidéo et de l'animation.
@@ -73,7 +78,7 @@
 			</article>
 
 			<article class="break-inside-avoid overflow-hidden rounded-2xl bg-gray-50 p-5 shadow-md">
-				<h3 class="mb-3 text-xl font-semibold">Fabrication de l'assise :</h3>
+				<h2 class="mb-3 text-xl font-semibold">Fabrication de l'assise :</h2>
 				<p class="mb-4">
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
 					type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
@@ -81,6 +86,7 @@
 					Aldus PageMaker including versions of Lorem Ipsum.
 				</p>
 				<blockquote
+					title="Post instagram de la fabrication d'une assise"
 					class="instagram-media"
 					data-instgrm-permalink="https://www.instagram.com/p/CoMZZjbM3og/?utm_source=ig_embed&amp;utm_campaign=loading"
 					data-instgrm-version="14"
@@ -121,7 +127,7 @@
 							</div>
 							<div style="padding-top: 8px;">
 								<div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
-									View this post on Instagram
+									Voir la publication sur Instagram
 								</div>
 							</div>
 							<div style="padding: 12.5% 0;"></div>
@@ -160,7 +166,7 @@
 							<a
 								href="https://www.instagram.com/p/CoMZZjbM3og/?utm_source=ig_embed&amp;utm_campaign=loading"
 								style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
-								target="_blank">A post shared by Aloïs Lamotte (@mawgwar)</a
+								target="_blank">Une publication d'Aloïs Lamotte (@mawgwar)</a
 							>
 						</p>
 					</div>
@@ -168,7 +174,7 @@
 			</article>
 
 			<article id="bd-immortel" class="break-inside-avoid overflow-hidden rounded-2xl bg-gray-50 p-5 shadow-md">
-				<h3 class="mb-3 text-xl font-semibold">BD Immortel :</h3>
+				<h2 class="mb-3 text-xl font-semibold">BD Immortel :</h2>
 				<div class="mb-8 flex flex-col items-center gap-2 p-2 sm:flex-row md:gap-x-4 md:p-4">
 					<figure class="xs:max-h-2 basis-full sm:max-h-none sm:basis-1/3 md:basis-2/5 xl:basis-1/2">
 						<img src={`${PUBLIC_STATIC_ASSET_BASE_URL}/projects/bd-immortel-couverture.jpg`} alt="couverture bd immortel" class="rounded-xl" />
@@ -200,11 +206,11 @@
 					/>
 				</figure>
 				<p class="mt-10 text-center">La BD n'étant plus disponnible sur le site de monsieur le prof je la propose ici en téléchargement libre et gratuit :</p>
-				<button class="mx-auto mt-6 block rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">Télécharger la BD immortel</button>
+				<button class="mx-auto mt-6 block rounded bg-gray-800 px-4 py-2 font-bold text-white hover:bg-black">Télécharger la BD immortel</button>
 			</article>
 
 			<article id="le-hussard-noir-couverture" class="break-inside-avoid overflow-hidden rounded-2xl bg-white p-5 shadow-md">
-				<h3 class="mb-3 text-xl font-semibold">Couverture "Le hussard noir"</h3>
+				<h2 class="mb-3 text-xl font-semibold">Couverture "Le hussard noir"</h2>
 				<div class="mb-8 flex flex-col items-center gap-2 p-2 sm:flex-row md:gap-x-4 md:p-4">
 					<figure class="xs:max-h-2 basis-full sm:max-h-none sm:basis-1/3 md:basis-2/5 xl:basis-1/2">
 						<img src={`${PUBLIC_STATIC_ASSET_BASE_URL}/projects/le-hussard-noir-couverture.jpg`} alt="couverture le hussard noir" class="rounded-xl" />
@@ -224,7 +230,7 @@
 			</article>
 
 			<article class="break-inside-avoid overflow-hidden rounded-2xl bg-white p-5 shadow-md">
-				<h3 class="mb-3 text-xl font-semibold">Fabrication miniature de cinéma</h3>
+				<h2 class="mb-3 text-xl font-semibold">Fabrication miniature de cinéma</h2>
 				<p class="mb-4">
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
 					type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
@@ -272,7 +278,7 @@
 							</div>
 							<div style="padding-top: 8px;">
 								<div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
-									View this post on Instagram
+									Voir la publication sur Instagram
 								</div>
 							</div>
 							<div style="padding: 12.5% 0;"></div>
@@ -311,7 +317,7 @@
 							<a
 								href="https://www.instagram.com/p/Cdf5Muaq-MF/?utm_source=ig_embed&amp;utm_campaign=loading"
 								style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
-								target="_blank">A post shared by Aloïs Lamotte (@mawgwar)</a
+								target="_blank">Une publication d'Aloïs Lamotte (@mawgwar)</a
 							>
 						</p>
 					</div>

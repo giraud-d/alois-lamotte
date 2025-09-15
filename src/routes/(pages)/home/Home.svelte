@@ -4,13 +4,18 @@
 	import Wave from '$lib/components/Wave.svelte';
 </script>
 
+<svelte:head>
+	<title>Aloïs Lamotte</title>
+	<meta name="description" content="Site vitrine de l'artiste Aloïs Lamotte" />
+</svelte:head>
+
 <main>
 	<section class="container mx-auto px-5 pt-2">
 		<h1 class="text-center text-5xl font-medium">Bienvenue !</h1>
 	</section>
 
 	<section class="container mx-auto px-5 py-8">
-		<h3 class="pb-8 text-2xl">Petite introduction :</h3>
+		<h2 class="pb-8 text-xl font-semibold">Petite introduction :</h2>
 		<p class="">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra erat libero, et ultrices velit rhoncus tempor. Curabitur a fermentum diam,
 			finibus dapibus nunc. Morbi a felis euismod, cursus eros eget, feugiat nunc. Fusce tellus sem, accumsan ac mattis ut, aliquam eget diam. Nunc ut neque
@@ -23,21 +28,21 @@
 	<Wave color="#f3f4f6" towardsBottom={false} />
 	<div class="bg-gray-100">
 		<section class="container mx-auto px-5 py-8">
-			<h3 class="pb-8 text-2xl">A la une</h3>
+			<h2 class="pb-8 text-xl font-semibold">A la une</h2>
 			<ArtWorkDetails artWork={paintings[0]} previousPage={() => undefined} nextPage={() => undefined} />
 		</section>
 	</div>
 	<Wave color="#f3f4f6" />
 
 	<section class="container mx-auto mb-8 px-5 py-8">
-		<h3 class="pb-16 text-2xl">Venez découvrir toutes mes réalisations :</h3>
+		<h2 class="pb-16 text-xl font-semibold">Venez découvrir toutes mes réalisations :</h2>
 		<div class="grid grid-flow-row-dense gap-16 sm:grid-cols-2 lg:grid-cols-3">
 			<a href="/painting" class="square mx-auto">
 				<span></span>
 				<span></span>
 				<span></span>
 				<div class="content">
-					<h3 class="text-2xl">Peinture</h3>
+					<h2 class="text-xl font-semibold">Peinture</h2>
 					<p>J'utilise des pinceaux et des toiles</p>
 				</div>
 			</a>
@@ -46,7 +51,7 @@
 				<span></span>
 				<span></span>
 				<div class="content">
-					<h3 class="text-2xl">Illustration</h3>
+					<h2 class="text-xl font-semibold">Illustration</h2>
 					<p>J'utilise des ordinateurs et adobe</p>
 				</div>
 			</a>
@@ -55,7 +60,7 @@
 				<span></span>
 				<span></span>
 				<div class="content">
-					<h3 class="text-2xl">Projets</h3>
+					<h2 class="text-xl font-semibold">Projets</h2>
 					<p>Vidéo youtube Mobilier des perspectives d'archi une première de couverture miniature de cinéma</p>
 				</div>
 			</a>

@@ -43,10 +43,10 @@ export const translations = {
 		},
 		notFound: { fr: 'Œuvre non trouvée', en: 'Art work not found' }
 	},
-	painting: {
-		title: { fr: 'Peinture', en: 'Painting' }
+	paintings: {
+		title: { fr: 'Peintures', en: 'Paintings' }
 	},
-	illustration: {
-		title: { fr: 'Illustration', en: 'Illustration' }
+	illustrations: {
+		title: { fr: 'Illustrations', en: 'Illustrations' }
 	}
 };

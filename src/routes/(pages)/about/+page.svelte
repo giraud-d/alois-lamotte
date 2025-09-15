@@ -3,6 +3,11 @@
 	import { PUBLIC_STATIC_ASSET_BASE_URL } from '$env/static/public';
 </script>
 
+<svelte:head>
+	<title>A propos - Aloïs Lamotte</title>
+	<meta name="description" content="Page dédié à la description de l'artiste Aloïs Lamotte" />
+</svelte:head>
+
 <Main>
 	<div class="flex flex-col items-center gap-4 p-4 sm:flex-row md:gap-x-8 md:p-8 lg:items-start">
 		<figure class="basis-full sm:basis-1/2 lg:basis-2/5 2xl:basis-1/3">

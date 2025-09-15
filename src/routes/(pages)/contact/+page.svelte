@@ -2,6 +2,11 @@
 	import Main from '$lib/components/Main.svelte';
 </script>
 
+<svelte:head>
+	<title>Contact - Aloïs Lamotte</title>
+	<meta name="description" content="Page de contcat du site vitrine de l'artiste Aloïs Lamotte" />
+</svelte:head>
+
 <Main>
 	<div class="container pb-24 pt-4 sm:pb-12 sm:pt-2">
 		<h1 class="pb-16 pt-2 text-center text-5xl font-medium">Contact</h1>
@@ -13,7 +18,7 @@
 		</p>
 		<div class="mt-12 grid justify-items-stretch gap-4 sm:grid-cols-2">
 			<section class="justify-self-center">
-				<h3 class="pb-8 text-center text-2xl">Par instagram :</h3>
+				<h2 class="pb-8 text-center text-xl font-semibold">Par instagram :</h2>
 				<a href="https://www.instagram.com/mawgwar/" rel="noreferrer" target="_blank" class="text-center text-2xl text-gray-800 transition hover:opacity-75">
 					<span class="sr-only">Instagram</span>
 					<svg class="mx-auto size-24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -26,7 +31,7 @@
 				</a>
 			</section>
 			<section class="mt-16 justify-self-center sm:mt-0">
-				<h3 class="pb-8 text-center text-2xl">Par mail :</h3>
+				<h2 class="pb-8 text-center text-xl font-semibold">Par mail :</h2>
 				<a href="mailto:contact@alois-lamotte.fr" rel="noreferrer" target="_blank" class="text-center text-xl text-gray-800 transition hover:opacity-75"
 					>contact@alois-lamotte.fr</a
 				>

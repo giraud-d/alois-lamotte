@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { type ArtWork, ArtWorkStatus } from '$lib/models/ArtWork';
+	import { page } from '$app/stores';
 	import { writable } from 'svelte/store';
 	import { onMount } from 'svelte';
 
@@ -15,6 +16,7 @@
 		nextPage: () => void;
 	} = $props();
 
+	let currentPath: string = $derived($page.url.pathname);
 	let currentViewIndex = $state(0);
 	let containerRatio = writable('1/1');
 	let imgElement: HTMLImageElement;
@@ -87,6 +89,13 @@
 		}
 	});
 </script>
+
+<svelte:head>
+	{#if currentPath !== '/home' && currentPath !== '/'}
+		<title>{artWork.title} - Aloïs Lamotte</title>
+		<meta name="description" content="L'oeuvre {artWork.title} a été réalisée par l'artiste Aloïs Lamotte en {artWork.year}. {artWork.description}" />
+	{/if}
+</svelte:head>
 
 <svelte:window on:keydown={handleKeyDown} ontouchstart={handleTouchStart} ontouchend={handleTouchEnd} />
 
