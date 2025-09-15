@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ArtWork } from '$lib/models/ArtWork';
+	import { type ArtWork, ArtWorkStatus } from '$lib/models/ArtWork';
 	import { writable } from 'svelte/store';
 	import { onMount } from 'svelte';
 
@@ -103,7 +103,20 @@
 		<time class="mb-2 text-gray-600">{artWork.year}</time>
 		<p class="mb-2 italic text-gray-600">{artWork.technique}</p>
 		{#if artWork.dimensions.height > 0}
-			<p class="mb-4 text-gray-600">{artWork.dimensions.height} × {artWork.dimensions.width} cm</p>
+			<p class="mb-2 text-gray-600">{artWork.dimensions.height} × {artWork.dimensions.width} cm</p>
+		{/if}
+		{#if artWork.status === ArtWorkStatus.TO_SELL}
+			<span class="mb-4 inline-flex w-20 items-center justify-center rounded-full bg-lime-100 px-2.5 py-0.5 text-lime-700">
+				<p class="whitespace-nowrap text-sm">A vendre</p>
+			</span>
+		{:else if artWork.status === ArtWorkStatus.BOOKED}
+			<span class="mb-4 inline-flex w-20 items-center justify-center rounded-full bg-amber-100 px-2.5 py-0.5 text-amber-700">
+				<p class="text-sm">Réservé</p>
+			</span>
+		{:else if artWork.status === ArtWorkStatus.SOLD}
+			<span class="mb-4 inline-flex w-20 items-center justify-center rounded-full bg-stone-100 px-2.5 py-0.5 text-stone-700">
+				<p class="whitespace-nowrap text-sm">Vendu</p>
+			</span>
 		{/if}
 		<p class="mb-8 text-base md:text-lg">{artWork.description}</p>
 		{#if artWork.views.length > 1}

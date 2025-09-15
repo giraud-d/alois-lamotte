@@ -29,14 +29,14 @@
 	</div>
 	<Wave color="#f3f4f6" />
 
-	<section class="container mx-auto px-5 py-8">
+	<section class="container mx-auto mb-8 px-5 py-8">
 		<h3 class="pb-16 text-2xl">Venez découvrir toutes mes réalisations :</h3>
 		<div class="grid grid-flow-row-dense gap-16 sm:grid-cols-2 lg:grid-cols-3">
 			<a href="/painting" class="square mx-auto">
 				<span></span>
 				<span></span>
 				<span></span>
-				<div class="content text-black">
+				<div class="content">
 					<h3 class="text-2xl">Peinture</h3>
 					<p>J'utilise des pinceaux et des toiles</p>
 				</div>
@@ -45,7 +45,7 @@
 				<span></span>
 				<span></span>
 				<span></span>
-				<div class="content text-black">
+				<div class="content">
 					<h3 class="text-2xl">Illustration</h3>
 					<p>J'utilise des ordinateurs et adobe</p>
 				</div>
@@ -54,7 +54,7 @@
 				<span></span>
 				<span></span>
 				<span></span>
-				<div class="content text-black">
+				<div class="content">
 					<h3 class="text-2xl">Projets</h3>
 					<p>Vidéo youtube Mobilier des perspectives d'archi une première de couverture miniature de cinéma</p>
 				</div>
@@ -112,17 +112,12 @@
 
 	.square:hover span {
 		border: none;
-		background: #f07e6e;
+		background: #1f2937;
+		color: #fff;
 	}
 
-	.square:hover span {
-		border: none;
-		background: #84cdfa;
-	}
-
-	.square:hover span {
-		border: none;
-		background: #5ad1cd;
+	.square:hover .content {
+		color: #fff;
 	}
 
 	.content {

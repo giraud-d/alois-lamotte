@@ -1,4 +1,4 @@
-import { type ArtWork, type ArtWorkByYear } from '$lib/models/ArtWork';
+import { type ArtWork, type ArtWorkByYear, ArtWorkStatus } from '$lib/models/ArtWork';
 import { PUBLIC_STATIC_ASSET_BASE_URL } from '$env/static/public';
 
 export const illustrations: ArtWork[] = [
@@ -10,6 +10,7 @@ export const illustrations: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/mes-fantomes_preview.jpg`,
 		link: 'mes-fantomes',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/mes-fantomes_main.jpg`],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Acrylique sur carton gris',
 		dimensions: { height: 15, width: 15 }
 	},
@@ -21,6 +22,7 @@ export const illustrations: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/le-hammam-de-la-grande-mosquee-de-paris_preview.jpg`,
 		link: 'le-hammam-de-la-grande-mosquee-de-paris',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/le-hammam-de-la-grande-mosquee-de-paris_main.jpg`],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Huile sur toile',
 		dimensions: { height: 80, width: 60 }
 	},
@@ -31,6 +33,7 @@ export const illustrations: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/souvenir-de-juin_main.jpg`,
 		link: 'souvenir-de-juin',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/souvenir-de-juin_main.jpg`],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Crayon de couleur',
 		dimensions: { height: 21, width: 14.8 }
 	},
@@ -42,6 +45,7 @@ export const illustrations: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/fading-away_preview.jpg`,
 		link: 'fading-away',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/fading-away_main.jpg`],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Technique mixte, Staedler, colorisation numérique',
 		dimensions: { height: 29.7, width: 21 }
 	},
@@ -52,6 +56,7 @@ export const illustrations: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/birth-and-death_main.jpg`,
 		link: 'birth-or-death',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/birth-and-death_main.jpg`],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Technique mixte, acrylique, feutre et numérique. Format A4',
 		dimensions: { height: 21, width: 29.7 }
 	},
@@ -62,6 +67,7 @@ export const illustrations: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/l-aviateur-et-le-lion_main.jpg`,
 		link: 'l-aviateur-et-le-lion',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/l-aviateur-et-le-lion_main.jpg`],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Acrylique et découpe papier sur A5',
 		dimensions: { height: 21, width: 14.8 }
 	}
@@ -73,6 +79,7 @@ export const illustrations: ArtWork[] = [
 		 preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/chou-hibou_main.png`,
 		 link: '2-chou-hibou',
 		 views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/chou-hibou_main.png`],
+		 status: ArtWorkStatus.BOOKED,
 		 technique: 'Staedler sur papier A0',
 		 dimensions: { height: 118.9, width: 84.1 }
 		},

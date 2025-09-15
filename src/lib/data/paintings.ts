@@ -1,4 +1,4 @@
-import { type ArtWork, type ArtWorkByYear } from '$lib/models/ArtWork';
+import { type ArtWork, type ArtWorkByYear, ArtWorkStatus } from '$lib/models/ArtWork';
 import { PUBLIC_STATIC_ASSET_BASE_URL } from '$env/static/public';
 
 export const paintings: ArtWork[] = [
@@ -16,6 +16,7 @@ export const paintings: ArtWork[] = [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_detail-3.jpg`,
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-III_detail-4.jpg`
 		],
+		status: ArtWorkStatus.TO_SELL,
 		technique: 'Huile sur toile',
 		dimensions: { height: 70, width: 50 }
 	},
@@ -31,6 +32,7 @@ export const paintings: ArtWork[] = [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/celeste-II_detail-1.jpg`,
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/celeste-II_detail-2.jpg`
 		],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Acrylique, papier sur toile',
 		dimensions: { height: 80, width: 80 }
 	},
@@ -42,6 +44,7 @@ export const paintings: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/celeste_preview.jpg`,
 		link: 'celeste',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/celeste_main.jpg`],
+		status: ArtWorkStatus.SOLD,
 		technique: 'Acrylique, papier sur toile',
 		dimensions: { height: 80, width: 80 }
 	},
@@ -53,6 +56,7 @@ export const paintings: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-I_preview.jpg`,
 		link: 'un-reflet-I',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-I_main.jpg`, `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-I_detail-1.jpg`],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Huile sur toile',
 		dimensions: { height: 165, width: 30 }
 	},
@@ -64,6 +68,7 @@ export const paintings: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/elevation_preview.jpg`,
 		link: 'elevation',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/elevation_main.jpg`, `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/elevation_detail-1.jpg`],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Huile sur toile',
 		dimensions: { height: 29, width: 29 }
 	},
@@ -78,6 +83,7 @@ export const paintings: ArtWork[] = [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/levee-du-rideau-de-brume_detail-1.jpg`,
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/levee-du-rideau-de-brume_detail-2.jpg`
 		],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Huile et acrylique sur toile',
 		dimensions: { height: 50, width: 40 }
 	},
@@ -94,6 +100,7 @@ export const paintings: ArtWork[] = [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_detail-2.jpg`,
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_detail-3.jpg`
 		],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Huile sur toile',
 		dimensions: { height: 60, width: 40 }
 	},
@@ -109,6 +116,7 @@ export const paintings: ArtWork[] = [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/les-cimes_detail-1.jpg`,
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/les-cimes_detail-2.jpg`
 		],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Acrylique sur toile',
 		dimensions: {
 			height: 0,
@@ -123,6 +131,7 @@ export const paintings: ArtWork[] = [
 	 preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/une-idee-au-loin-dans-le-tumulte-quotidien.jpg`, // Empty
 	 link: 'idee-au-loin',
 	 views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/une-idee-au-loin-dans-le-tumulte-quotidien.jpg`], // Empty
+	 status: ArtWorkStatus.BOOKED,
 	 technique: 'Huile et mycelium sur grain de millet collé sur toile',
 	 dimensions: { height: 60, width: 50 }
 	},
@@ -140,6 +149,7 @@ export const paintings: ArtWork[] = [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/toise-de-croissance_detail-2.jpg`,
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/toise-de-croissance_detail-3.jpg`
 		],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Peinture acrylique sur mur',
 		dimensions: {
 			height: 0,
@@ -171,6 +181,7 @@ export const paintings: ArtWork[] = [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/bitter_detail-2.jpg`,
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/bitter_detail-3.jpg`
 		],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Peinture à l’huile sur toile',
 		dimensions: { height: 70, width: 70 }
 	},
@@ -182,6 +193,7 @@ export const paintings: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/immerge_preview.jpg`,
 		link: 'immerge',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/immerge_main.jpg`],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Acrylique, papier sur toile',
 		dimensions: { height: 80, width: 80 }
 	},
@@ -198,6 +210,7 @@ export const paintings: ArtWork[] = [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_detail-2.jpg`,
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_detail-3.jpg`
 		],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Acrylique sur toile',
 		dimensions: {
 			height: 0,
@@ -215,6 +228,7 @@ export const paintings: ArtWork[] = [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/descendant_detail-1.jpg`,
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/descendant_detail-2.jpg`
 		],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Huile sur toile',
 		dimensions: {
 			height: 0,
@@ -228,6 +242,7 @@ export const paintings: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/perception_preview.jpg`,
 		link: 'perception',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/perception_main.jpg`, `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/perception_detail-1.jpg`],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Huile sur toile',
 		dimensions: {
 			height: 0,
@@ -242,6 +257,7 @@ export const paintings: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/thumos_preview.jpg`,
 		link: 'thumos',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/thumos_main.jpg`, `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/thumos_detail-1.jpg`],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Huile sur toile',
 		dimensions: {
 			height: 0,
@@ -260,6 +276,7 @@ export const paintings: ArtWork[] = [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-printemps-sans-nom_detail-2.jpg`,
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-printemps-sans-nom_detail-3.jpg`
 		],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Huile sur toile',
 		dimensions: {
 			height: 0,
@@ -278,6 +295,7 @@ export const paintings: ArtWork[] = [
 		`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/insomnie_main.jpg`,
 		`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/insomnie_detail-1.jpg`,
 	 ],
+	 status: ArtWorkStatus.BOOKED,
 	 technique: '',
 	 dimensions: { height: 0, width: 0 }
 	},
@@ -292,6 +310,7 @@ export const paintings: ArtWork[] = [
 		`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/tourments_main.jpg`,
 		`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/tourments_detail-1.jpg`,
 	 ],
+	 status: ArtWorkStatus.BOOKED,
 	 technique: 'Huile sur toile',
 	 dimensions: { height: 0, width: 0 }
 	},
@@ -305,6 +324,7 @@ export const paintings: ArtWork[] = [
 	 preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/tmp-shapes.png`, // Empty
 	 link: 'ambree',
 	 views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/tmp-shapes.png`], // Empty
+	 status: ArtWorkStatus.BOOKED,
 	 technique: "Gomme d'abricotier avec acrylique sur bois",
 	 dimensions: { height: 42, width: 30 }
 	},
@@ -316,6 +336,7 @@ export const paintings: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/mask_preview.jpg`,
 		link: 'mask',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/mask_main.jpg`, `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/mask_detail-1.jpg`],
+		status: ArtWorkStatus.BOOKED,
 		technique: 'Acrylique et plâtre',
 		dimensions: {
 			height: 0,
@@ -330,6 +351,7 @@ export const paintings: ArtWork[] = [
 	 preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/genese-inspiration-de-matis_preview.png`,
 	 link: 'genese-inspiration-de-matis',
 	 views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/genese-inspiration-de-matis_main.png`],
+	 status: ArtWorkStatus.BOOKED,
 	 technique: 'Acrylique sur dos de papier peint',
 	 dimensions: {
 		height: 0,

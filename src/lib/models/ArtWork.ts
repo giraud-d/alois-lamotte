@@ -9,6 +9,7 @@ export interface ArtWork {
 	preview: string;
 	link: string;
 	views: string[];
+	status: ArtWorkStatus;
 	technique: string;
 	dimensions: {
 		height: number;
@@ -19,4 +20,10 @@ export interface ArtWork {
 export enum ArtWorkType {
 	PAINTING = 'painting',
 	ILLUSTRATION = 'illustration'
+}
+
+export enum ArtWorkStatus {
+	SOLD = 'sold',
+	BOOKED = 'booked',
+	TO_SELL = 'unsold'
 }

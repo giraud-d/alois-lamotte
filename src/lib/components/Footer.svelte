@@ -5,7 +5,7 @@
 <Wave towardsBottom={false} />
 
 <footer class="bg-gray-800">
-	<div class="mx-auto max-w-screen-xl space-y-8 px-4 pb-8 pt-6 sm:px-6 lg:px-8 lg:pt-0">
+	<div class="container mx-auto space-y-8 px-4 pb-8 pt-6 sm:px-6 lg:px-8 lg:pt-0">
 		<div class="flex items-center justify-between">
 			<div class="text-white">
 				<p>Alois Lamotte</p>

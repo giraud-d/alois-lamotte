@@ -43,7 +43,7 @@
 		{/if}
 	</section>
 	{#if artWork}
-		<section class=" bg-gray-100 pb-8">
+		<section class="bg-gray-100 pb-8">
 			<div class="mx-auto mt-8 flex max-w-7xl flex-col space-y-4 sm:flex-row sm:justify-between sm:space-y-0">
 				{#if prevArtWork}
 					<a

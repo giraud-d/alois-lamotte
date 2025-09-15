@@ -17,7 +17,7 @@
 	});
 </script>
 
-<main class:fallback={isAppleWebKitBrowser}>
+<main class:fallback={isAppleWebKitBrowser} class="container mx-auto">
 	<h1 class="pb-16 pt-2 text-center text-5xl font-medium">
 		{artWorkType === ArtWorkType.PAINTING ? $t('painting.title') : $t('illustration.title')}
 	</h1>
@@ -26,7 +26,7 @@
 		<div class="mb-16">
 			<div class="mx-auto max-w-[1800px] px-4">
 				<h2 class="m-8 text-3xl font-medium">{year}</h2>
-				<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+				<div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
 					{#each artWorksByYear[Number(year)] as artWork}
 						<div class="flex w-full items-center justify-center">
 							<a href="/{artWorkType}/{artWork.link}" class="relative block w-full cursor-pointer border-0 bg-transparent p-0" role="button" tabindex="0">

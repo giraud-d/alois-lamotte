@@ -2,6 +2,7 @@
 	import Home from './(pages)/home/Home.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import '../app.css';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <!-- Intro fullscreen -->
@@ -17,6 +18,8 @@
 <Header withoutName={true} />
 
 <Home />
+
+<Footer />
 
 <style>
 	@supports (-webkit-touch-callout: none) {
