@@ -9,9 +9,10 @@ export interface ArtWork {
 	preview: string;
 	link: string;
 	views: string[];
-	status: ArtWorkStatus;
+	status?: ArtWorkStatus;
+	printAvailable?: boolean;
 	technique: string;
-	dimensions: {
+	dimensions?: {
 		height: number;
 		width: number;
 	};

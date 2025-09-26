@@ -24,8 +24,6 @@
 			</div>
 		</div>
 
-		<div class="border-b border-gray-300"></div>
-
 		<p class="text-end text-xs text-gray-300">
 			Site réalisé avec
 			<svg class="inline h-4 w-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">

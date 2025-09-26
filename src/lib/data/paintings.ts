@@ -3,6 +3,22 @@ import { PUBLIC_STATIC_ASSET_BASE_URL } from '$env/static/public';
 
 export const paintings: ArtWork[] = [
 	{
+		title: 'Celeste II',
+		description:
+			'Ce tableau entremêle deux souvenirs : un regard chargé de passion et l’image d’une lamelle de météorite observée au microscope. Les formes et les couleurs se superposent, évoquant à la fois l’infiniment petit et l’infiniment grand, le minéral et l’émotion. Entre abstraction et figuration, le regard apparaît et disparaît, comme une trace persistante dans la mémoire.',
+		year: 2025,
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/celeste-II_preview.jpg`,
+		link: 'celeste-II',
+		views: [
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/celeste-II_main.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/celeste-II_detail-1.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/celeste-II_detail-2.jpg`
+		],
+		status: ArtWorkStatus.TO_SELL,
+		technique: 'Acrylique, papier sur toile',
+		dimensions: { height: 80, width: 80 }
+	},
+	{
 		title: 'Un reflet III',
 		description:
 			'Le médium utilisé pour cette toile porte en lui un mystère. Issu du cellier de ma grand-mère, qui l’avait elle-même hérité de sa propre mère, il traverse les générations comme un fragment d’histoire familiale. C’est sur ce support chargé de mémoire que j’inscris mon souvenir, celui d’une rencontre marquante qui a profondément influencé ma pratique architecturale.',
@@ -21,20 +37,19 @@ export const paintings: ArtWork[] = [
 		dimensions: { height: 70, width: 50 }
 	},
 	{
-		title: 'Celeste II',
-		description:
-			'Ce tableau entremêle deux souvenirs : un regard chargé de passion et l’image d’une lamelle de météorite observée au microscope. Les formes et les couleurs se superposent, évoquant à la fois l’infiniment petit et l’infiniment grand, le minéral et l’émotion. Entre abstraction et figuration, le regard apparaît et disparaît, comme une trace persistante dans la mémoire.',
+		title: 'Un printemps sans nom',
+		description: 'Mon jardin renaît au printemps et j’entend le rire des enfants jouant dans la cour,c’est un moment paisible dans la campagne Surzuroise.',
 		year: 2025,
-		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/celeste-II_preview.jpg`,
-		link: 'celeste-II',
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-printemps-sans-nom_preview.jpg`,
+		link: 'un-printemps-sans-nom',
 		views: [
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/celeste-II_main.jpg`,
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/celeste-II_detail-1.jpg`,
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/celeste-II_detail-2.jpg`
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-printemps-sans-nom_main.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-printemps-sans-nom_detail-1.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-printemps-sans-nom_detail-2.jpg`,
+			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-printemps-sans-nom_detail-3.jpg`
 		],
-		status: ArtWorkStatus.BOOKED,
-		technique: 'Acrylique, papier sur toile',
-		dimensions: { height: 80, width: 80 }
+		status: ArtWorkStatus.TO_SELL,
+		technique: 'Huile sur toile'
 	},
 	{
 		title: 'Céleste',
@@ -56,7 +71,7 @@ export const paintings: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-I_preview.jpg`,
 		link: 'un-reflet-I',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-I_main.jpg`, `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-reflet-I_detail-1.jpg`],
-		status: ArtWorkStatus.BOOKED,
+		status: ArtWorkStatus.SOLD,
 		technique: 'Huile sur toile',
 		dimensions: { height: 165, width: 30 }
 	},
@@ -68,7 +83,8 @@ export const paintings: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/elevation_preview.jpg`,
 		link: 'elevation',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/elevation_main.jpg`, `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/elevation_detail-1.jpg`],
-		status: ArtWorkStatus.BOOKED,
+		status: ArtWorkStatus.TO_SELL,
+		printAvailable: true,
 		technique: 'Huile sur toile',
 		dimensions: { height: 29, width: 29 }
 	},
@@ -83,7 +99,7 @@ export const paintings: ArtWork[] = [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/levee-du-rideau-de-brume_detail-1.jpg`,
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/levee-du-rideau-de-brume_detail-2.jpg`
 		],
-		status: ArtWorkStatus.BOOKED,
+		status: ArtWorkStatus.TO_SELL,
 		technique: 'Huile et acrylique sur toile',
 		dimensions: { height: 50, width: 40 }
 	},
@@ -100,7 +116,7 @@ export const paintings: ArtWork[] = [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_detail-2.jpg`,
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/discordance_detail-3.jpg`
 		],
-		status: ArtWorkStatus.BOOKED,
+		status: ArtWorkStatus.TO_SELL,
 		technique: 'Huile sur toile',
 		dimensions: { height: 60, width: 40 }
 	},
@@ -117,11 +133,7 @@ export const paintings: ArtWork[] = [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/les-cimes_detail-2.jpg`
 		],
 		status: ArtWorkStatus.BOOKED,
-		technique: 'Acrylique sur toile',
-		dimensions: {
-			height: 0,
-			width: 0
-		}
+		technique: 'Acrylique sur toile'
 	},
 	/*
 	 {
@@ -149,12 +161,7 @@ export const paintings: ArtWork[] = [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/toise-de-croissance_detail-2.jpg`,
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/toise-de-croissance_detail-3.jpg`
 		],
-		status: ArtWorkStatus.BOOKED,
-		technique: 'Peinture acrylique sur mur',
-		dimensions: {
-			height: 0,
-			width: 0
-		}
+		technique: 'Peinture acrylique sur mur'
 	},
 	/*
 	{
@@ -181,21 +188,21 @@ export const paintings: ArtWork[] = [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/bitter_detail-2.jpg`,
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/bitter_detail-3.jpg`
 		],
-		status: ArtWorkStatus.BOOKED,
+		status: ArtWorkStatus.TO_SELL,
 		technique: 'Peinture à l’huile sur toile',
 		dimensions: { height: 70, width: 70 }
 	},
 	{
 		title: 'Immergé',
 		description:
-			'En 2019, une découverte fortuite : un nodule thyroïdien, révélant la fragilité du corps et la fugacité de l’existence. Deux ans plus tôt, en 2017, l’expérience de la maternité avait chamboulé mon univers de doutes et d’un amour incommensurable. Entre la vie qui naît et la conscience de la fragilité de nos corps, ce tableau est le reflet d’un tiraillement intime, une oscillation entre émerveillement et inquiétude et la prise de conscience de ma propre mortalité. Chaque trait, chaque nuance traduit l’écho de ces émotions entremêlées, entre création et disparition, entre angoisse et beauté.',
+			'Un après-midi d’été, je me laisse flotter entre deux eaux. Le soleil joue sur mes paupières, tandis que le ciel et l’eau se confondent en un seul horizon.',
 		year: 2019,
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/immerge_preview.jpg`,
 		link: 'immerge',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/immerge_main.jpg`],
-		status: ArtWorkStatus.BOOKED,
-		technique: 'Acrylique, papier sur toile',
-		dimensions: { height: 80, width: 80 }
+		status: ArtWorkStatus.SOLD,
+		printAvailable: true,
+		technique: 'Huile sur toile '
 	},
 	{
 		title: 'Errance',
@@ -210,12 +217,7 @@ export const paintings: ArtWork[] = [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_detail-2.jpg`,
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/errance_detail-3.jpg`
 		],
-		status: ArtWorkStatus.BOOKED,
-		technique: 'Acrylique sur toile',
-		dimensions: {
-			height: 0,
-			width: 0
-		}
+		technique: 'Acrylique sur toile'
 	},
 	{
 		title: 'Descendant',
@@ -229,11 +231,7 @@ export const paintings: ArtWork[] = [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/descendant_detail-2.jpg`
 		],
 		status: ArtWorkStatus.BOOKED,
-		technique: 'Huile sur toile',
-		dimensions: {
-			height: 0,
-			width: 0
-		}
+		technique: 'Huile sur toile'
 	},
 	{
 		title: 'Perception',
@@ -243,11 +241,7 @@ export const paintings: ArtWork[] = [
 		link: 'perception',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/perception_main.jpg`, `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/perception_detail-1.jpg`],
 		status: ArtWorkStatus.BOOKED,
-		technique: 'Huile sur toile',
-		dimensions: {
-			height: 0,
-			width: 0
-		}
+		technique: 'Huile sur toile'
 	},
 	{
 		title: 'Thumos',
@@ -257,31 +251,8 @@ export const paintings: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/thumos_preview.jpg`,
 		link: 'thumos',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/thumos_main.jpg`, `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/thumos_detail-1.jpg`],
-		status: ArtWorkStatus.BOOKED,
-		technique: 'Huile sur toile',
-		dimensions: {
-			height: 0,
-			width: 0
-		}
-	},
-	{
-		title: 'Un printemps sans nom',
-		description: 'Mon jardin renaît au printemps et j’entend le rire des enfants jouant dans la cour,c’est un moment paisible dans la campagne Surzuroise.',
-		year: 2019,
-		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-printemps-sans-nom_preview.jpg`,
-		link: 'un-printemps-sans-nom',
-		views: [
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-printemps-sans-nom_main.jpg`,
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-printemps-sans-nom_detail-1.jpg`,
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-printemps-sans-nom_detail-2.jpg`,
-			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/un-printemps-sans-nom_detail-3.jpg`
-		],
-		status: ArtWorkStatus.BOOKED,
-		technique: 'Huile sur toile',
-		dimensions: {
-			height: 0,
-			width: 0
-		}
+		status: ArtWorkStatus.TO_SELL,
+		technique: 'Huile sur toile'
 	},
 	/*
 	 {
@@ -297,7 +268,6 @@ export const paintings: ArtWork[] = [
 	 ],
 	 status: ArtWorkStatus.BOOKED,
 	 technique: '',
-	 dimensions: { height: 0, width: 0 }
 	},
 	{
 	 title: 'Tourments',
@@ -312,7 +282,6 @@ export const paintings: ArtWork[] = [
 	 ],
 	 status: ArtWorkStatus.BOOKED,
 	 technique: 'Huile sur toile',
-	 dimensions: { height: 0, width: 0 }
 	},
 	 */
 	/*
@@ -336,12 +305,7 @@ export const paintings: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/mask_preview.jpg`,
 		link: 'mask',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/mask_main.jpg`, `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/mask_detail-1.jpg`],
-		status: ArtWorkStatus.BOOKED,
-		technique: 'Acrylique et plâtre',
-		dimensions: {
-			height: 0,
-			width: 0
-		}
+		technique: 'Acrylique et plâtre'
 	}
 	/*
 	{
@@ -353,10 +317,6 @@ export const paintings: ArtWork[] = [
 	 views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/genese-inspiration-de-matis_main.png`],
 	 status: ArtWorkStatus.BOOKED,
 	 technique: 'Acrylique sur dos de papier peint',
-	 dimensions: {
-		height: 0,
-		width: 0
-	 }
 	},
 	*/
 ];

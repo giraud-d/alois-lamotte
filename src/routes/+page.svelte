@@ -3,10 +3,14 @@
 	import Header from '$lib/components/Header.svelte';
 	import '../app.css';
 	import Footer from '$lib/components/Footer.svelte';
+	import { PUBLIC_STATIC_ASSET_BASE_URL } from '$env/static/public';
 </script>
 
 <!-- Intro fullscreen -->
-<div class="min-h-screen-ios relative min-h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('assets/tmp-banner.jpg');">
+<div
+	class="min-h-screen-ios relative min-h-screen bg-cover bg-center bg-no-repeat"
+	style="background-image: url('{PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/perspective-pour-ecole-architecture_main.jpg');"
+>
 	<div class="h-24"></div>
 	<div class="absolute bottom-10 flex w-full animate-bounce justify-center">
 		<svg class="h-6 w-6 text-white" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">

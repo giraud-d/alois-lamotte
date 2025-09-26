@@ -40,7 +40,12 @@
 					{#each artWorksByYear[Number(year)] as artWork}
 						<div class="flex w-full items-center justify-center">
 							<a href="/{artWorkType}/{artWork.link}" class="relative block w-full cursor-pointer border-0 bg-transparent p-0" role="button" tabindex="0">
-								<div class="svgBlob" style="aspect-ratio: {Math.max(0.75, Math.min(2, artWork.dimensions.width / artWork.dimensions.height))}/1;">
+								<div
+									class="svgBlob"
+									style="aspect-ratio: {artWork.dimensions && artWork.dimensions.width && artWork.dimensions.height
+										? Math.max(0.75, Math.min(2, artWork.dimensions.width / artWork.dimensions.height))
+										: 1}/1;"
+								>
 									<svg viewBox="0 0 500 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
 										<defs>
 											<linearGradient id="blobGradient-{year}-{artWork.title}">

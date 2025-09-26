@@ -15,20 +15,18 @@
 	</section>
 
 	<section class="container mx-auto px-5 py-8">
-		<h2 class="pb-8 text-xl font-semibold">Petite introduction :</h2>
-		<p class="">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra erat libero, et ultrices velit rhoncus tempor. Curabitur a fermentum diam,
-			finibus dapibus nunc. Morbi a felis euismod, cursus eros eget, feugiat nunc. Fusce tellus sem, accumsan ac mattis ut, aliquam eget diam. Nunc ut neque
-			sapien. Pellentesque eu dui leo. Pellentesque efficitur leo imperdiet convallis finibus. Cras convallis orci vel nulla luctus gravida. Suspendisse
-			sagittis fermentum metus aliquet placerat. Vestibulum quis egestas ex, commodo porttitor nulla. Nunc sollicitudin porta tortor eget aliquet. Aliquam in
-			dapibus arcu. Nam eget elit ut leo auctor sagittis. Curabitur in rutrum massa.
+		<p>
+			Artiste plurielle, je mêle peinture, illustration et projets visuels pour vous proposer un regard personnel porté sur le souvenir, la matière et l’espace.
+			À travers chaque projet, je cherche non seulement à représenter ce que j’ai vu, vécu ou ressenti, mais à inviter le spectateur dans un dialogue entre le
+			tangible et l’impalpable, entre le passé familial et le présent créatif. Bienvenue dans mon univers, où chaque œuvre est une recherche, un témoignage, un
+			fragment qui peut peut-être résonner en vous.
 		</p>
 	</section>
 
 	<Wave color="#f3f4f6" towardsBottom={false} />
 	<div class="bg-gray-100">
 		<section class="container mx-auto px-5 py-8">
-			<h2 class="pb-8 text-xl font-semibold">A la une</h2>
+			<h2 class="pb-8 text-xl font-semibold">À la une</h2>
 			<ArtWorkDetails artWork={paintings[0]} previousPage={() => undefined} nextPage={() => undefined} />
 		</section>
 	</div>

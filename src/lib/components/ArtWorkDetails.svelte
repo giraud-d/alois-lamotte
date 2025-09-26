@@ -111,23 +111,32 @@
 		<h1 class="mb-4 text-2xl font-medium md:text-4xl">{artWork.title}</h1>
 		<time class="mb-2 text-gray-600">{artWork.year}</time>
 		<p class="mb-2 italic text-gray-600">{artWork.technique}</p>
-		{#if artWork.dimensions.height > 0}
+		{#if artWork.dimensions}
 			<p class="mb-2 text-gray-600">{artWork.dimensions.height} × {artWork.dimensions.width} cm</p>
 		{/if}
-		{#if artWork.status === ArtWorkStatus.TO_SELL}
-			<span class="mb-4 inline-flex w-20 items-center justify-center rounded-full bg-lime-100 px-2.5 py-0.5 text-lime-700">
-				<p class="whitespace-nowrap text-sm">A vendre</p>
-			</span>
-		{:else if artWork.status === ArtWorkStatus.BOOKED}
-			<span class="mb-4 inline-flex w-20 items-center justify-center rounded-full bg-amber-100 px-2.5 py-0.5 text-amber-700">
-				<p class="text-sm">Réservé</p>
-			</span>
-		{:else if artWork.status === ArtWorkStatus.SOLD}
-			<span class="mb-4 inline-flex w-20 items-center justify-center rounded-full bg-stone-100 px-2.5 py-0.5 text-stone-700">
-				<p class="whitespace-nowrap text-sm">Vendu</p>
-			</span>
-		{/if}
-		<p class="mb-8 text-base md:text-lg">{artWork.description}</p>
+		<div class="flex items-center space-x-4">
+			<div class="flex space-x-2">
+				{#if artWork.status === ArtWorkStatus.TO_SELL}
+					<span class="inline-flex w-20 items-center justify-center rounded-full bg-lime-100 px-2.5 py-0.5 text-lime-700">
+						<p class="whitespace-nowrap text-sm">À vendre</p>
+					</span>
+				{:else if artWork.status === ArtWorkStatus.BOOKED}
+					<span class="inline-flex w-20 items-center justify-center rounded-full bg-amber-100 px-2.5 py-0.5 text-amber-700">
+						<p class="text-sm">Réservé</p>
+					</span>
+				{:else if artWork.status === ArtWorkStatus.SOLD}
+					<span class="inline-flex w-20 items-center justify-center rounded-full bg-stone-100 px-2.5 py-0.5 text-stone-700">
+						<p class="whitespace-nowrap text-sm">Vendu</p>
+					</span>
+				{/if}
+				{#if artWork.printAvailable}
+					<span class="inline-flex w-32 items-center justify-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-emerald-700">
+						<p class="whitespace-nowrap text-sm">Print disponible</p>
+					</span>
+				{/if}
+			</div>
+		</div>
+		<p class="mb-8 mt-4 text-base md:text-lg">{artWork.description}</p>
 		{#if artWork.views.length > 1}
 			<div class="flex gap-2 overflow-x-auto pb-4 pt-4 md:gap-4">
 				{#each artWork.views as view, i}

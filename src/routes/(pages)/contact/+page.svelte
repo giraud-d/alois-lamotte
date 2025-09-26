@@ -10,12 +10,8 @@
 <Main>
 	<div class="container pb-24 pt-4 sm:pb-12 sm:pt-2">
 		<h1 class="pb-16 pt-2 text-center text-5xl font-medium">Contact</h1>
-		<p>
-			Que se soit pour une demande, pour achter ou Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra erat libero, et ultrices velit
-			rhoncus tempor. Curabitur a fermentum diam, finibus dapibus nunc. Morbi a felis euismod, cursus eros eget, feugiat nunc. Fusce tellus sem, accumsan ac
-			mattis ut, aliquam eget diam. Nunc ut neque sapien. Pellentesque eu dui leo. Pellentesque efficitur leo imperdiet convallis finibus. Cras convallis orci
-			vel nulla luctus gravida. Suspendisse sagittis fermentum metus aliquet placerat.
-		</p>
+		<p class="text-center">Vous souhaitez acquérir une œuvre, en savoir plus sur mon travail ou discuter d’un futur projet ?</p>
+		<p class="mt-2 text-center">N’hésitez pas à me contacter, je vous répondrai avec plaisir.</p>
 		<div class="mt-12 grid justify-items-stretch gap-4 sm:grid-cols-2">
 			<section class="justify-self-center">
 				<h2 class="pb-8 text-center text-xl font-semibold">Par instagram :</h2>
@@ -37,6 +33,5 @@
 				>
 			</section>
 		</div>
-		<img src="assets/tmp-contact-radio.jpg" alt="Map" class="mx-auto mt-24 h-auto rounded-full border-4 border-gray-800 sm:mt-12" />
 	</div>
 </Main>

@@ -10,7 +10,8 @@ export const illustrations: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/mes-fantomes_preview.jpg`,
 		link: 'mes-fantomes',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/mes-fantomes_main.jpg`],
-		status: ArtWorkStatus.BOOKED,
+		status: ArtWorkStatus.TO_SELL,
+		printAvailable: true,
 		technique: 'Acrylique sur carton gris',
 		dimensions: { height: 15, width: 15 }
 	},
@@ -22,9 +23,9 @@ export const illustrations: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/le-hammam-de-la-grande-mosquee-de-paris_preview.jpg`,
 		link: 'le-hammam-de-la-grande-mosquee-de-paris',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/le-hammam-de-la-grande-mosquee-de-paris_main.jpg`],
-		status: ArtWorkStatus.BOOKED,
-		technique: 'Huile sur toile',
-		dimensions: { height: 80, width: 60 }
+		status: ArtWorkStatus.TO_SELL,
+		technique: "Feutre à l'alcool et crayons de couleurs",
+		dimensions: { height: 14.8, width: 21 }
 	},
 	{
 		title: 'Souvenir de juin',
@@ -45,7 +46,7 @@ export const illustrations: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/fading-away_preview.jpg`,
 		link: 'fading-away',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/fading-away_main.jpg`],
-		status: ArtWorkStatus.BOOKED,
+		printAvailable: true,
 		technique: 'Technique mixte, Staedler, colorisation numérique',
 		dimensions: { height: 29.7, width: 21 }
 	},
@@ -56,7 +57,7 @@ export const illustrations: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/birth-and-death_main.jpg`,
 		link: 'birth-or-death',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/birth-and-death_main.jpg`],
-		status: ArtWorkStatus.BOOKED,
+		printAvailable: true,
 		technique: 'Technique mixte, acrylique, feutre et numérique. Format A4',
 		dimensions: { height: 21, width: 29.7 }
 	},
@@ -67,7 +68,7 @@ export const illustrations: ArtWork[] = [
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/l-aviateur-et-le-lion_main.jpg`,
 		link: 'l-aviateur-et-le-lion',
 		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/l-aviateur-et-le-lion_main.jpg`],
-		status: ArtWorkStatus.BOOKED,
+		printAvailable: true,
 		technique: 'Acrylique et découpe papier sur A5',
 		dimensions: { height: 21, width: 14.8 }
 	}
