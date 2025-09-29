@@ -54,3 +54,19 @@ Before or after deploying, make sure to upload all image assets:
 - Drag and drop the full contents of the `painting` and `illustration` directories into the **R2 bucket** on Cloudflare for assets.
 
 This ensures all static images are correctly served in production.
+
+### Configuration on Cloudflare Worker
+
+```
+Configuration de build
+Commande de build:PUBLIC_STATIC_ASSET_BASE_URL="https://r2.alois-lamotte.com" npm run build
+Sortie du build:.svelte-kit/cloudflare
+Répertoire racine:
+Commentaires du build:Activé
+```
+
+# TODOs
+
+## Nice to have
+
+- Use better image optimization with [Svelte tools](https://svelte.dev/docs/kit/images)

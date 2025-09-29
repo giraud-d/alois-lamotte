@@ -28,8 +28,8 @@
 			</section>
 			<section class="mt-16 justify-self-center sm:mt-0">
 				<h2 class="pb-8 text-center text-xl font-semibold">Par mail :</h2>
-				<a href="mailto:contact@alois-lamotte.fr" rel="noreferrer" target="_blank" class="text-center text-xl text-gray-800 transition hover:opacity-75"
-					>contact@alois-lamotte.fr</a
+				<a href="mailto:contact@alois-lamotte.com" rel="noreferrer" target="_blank" class="text-center text-xl text-gray-800 transition hover:opacity-75"
+					>contact@alois-lamotte.com</a
 				>
 			</section>
 		</div>
