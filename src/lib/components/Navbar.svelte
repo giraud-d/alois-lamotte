@@ -2,9 +2,11 @@
 	import { page } from '$app/stores';
 	//import { language, type Language } from '$lib/language';
 	import { t } from '$lib/data/translations';
+	import { tick } from 'svelte';
 
 	let currentPath: string = $derived($page.url.pathname);
 	let isMenuOpen: boolean = $state(false);
+	let menuButton: HTMLButtonElement;
 
 	const navs = [
 		{
@@ -33,9 +35,21 @@
 		}
 	];
 
-	function toggleMenu() {
-		console.log(isMenuOpen);
+	async function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
+		if (isMenuOpen) {
+			await tick();
+			const firstLink = document.querySelector<HTMLElement>('#mobile-menu a');
+			firstLink?.focus();
+		} else {
+			menuButton?.focus();
+		}
+	}
+
+	function handleKeydown(event: KeyboardEvent) {
+		if (event.key === 'Escape') {
+			isMenuOpen = false;
+		}
 	}
 
 	// Only french for now
@@ -55,6 +69,7 @@
 					aria-controls="mobile-menu"
 					aria-expanded={isMenuOpen}
 					onclick={toggleMenu}
+					bind:this={menuButton}
 				>
 					<span class="sr-only">Open main menu</span>
 					<svg
@@ -87,11 +102,9 @@
 					<div class="flex space-x-4">
 						{#each navs as { titleKey, href }}
 							{#if href === currentPath || (href === '/home' && currentPath === '/')}
-								<a {href} title={$t(titleKey)} class="text-md rounded-md bg-gray-900 px-3 py-2 font-medium text-white" aria-current="page">{$t(titleKey)}</a>
+								<a {href} class="text-md rounded-md bg-gray-900 px-3 py-2 font-medium text-white" aria-current="page">{$t(titleKey)}</a>
 							{:else}
-								<a {href} title={$t(titleKey)} class="text-md rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-									>{$t(titleKey)}</a
-								>
+								<a {href} class="text-md rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-gray-700 hover:text-white">{$t(titleKey)}</a>
 							{/if}
 						{/each}
 						<!--						<button-->
@@ -107,23 +120,19 @@
 	</div>
 	<!-- Mobile menu -->
 	{#if isMenuOpen}
-		<div class="sm:hidden" id="mobile-menu">
+		<div class="sm:hidden" id="mobile-menu" onkeydown={handleKeydown} role="menu" tabindex="-1">
 			<div class="space-y-1 px-2 pb-3 pt-2">
 				{#each navs as { titleKey, href }}
 					{#if href === currentPath}
 						<a
 							{href}
-							title={$t(titleKey)}
 							class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
 							onclick={toggleMenu}
 							aria-current="page">{$t(titleKey)}</a
 						>
 					{:else}
-						<a
-							{href}
-							title={$t(titleKey)}
-							class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-							onclick={toggleMenu}>{$t(titleKey)}</a
+						<a {href} class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white" onclick={toggleMenu}
+							>{$t(titleKey)}</a
 						>
 					{/if}
 				{/each}

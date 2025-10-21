@@ -20,7 +20,7 @@
 					<figure class="xs:max-h-2 basis-full sm:max-h-none sm:basis-1/3 md:basis-2/5 xl:basis-1/2">
 						<img
 							src={`${PUBLIC_STATIC_ASSET_BASE_URL}/projects/scenographie-muse-prehistoire-affiche-journee-de-l-architecture.jpg`}
-							alt="Hypnosphère"
+							alt="Affiche de la journée de l'architecture pour le projet de scénographie du musée de la préhistoire"
 							class="rounded-xl"
 						/>
 					</figure>
@@ -38,7 +38,7 @@
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								Lien vers l'article du musée
+								Lien vers l'article du musée <span class="sr-only">(s'ouvre dans un nouvel onglet)</span>
 							</a>
 						</cite>
 					</p>
@@ -63,7 +63,7 @@
 				<figure class="mt-10">
 					<img
 						src={`${PUBLIC_STATIC_ASSET_BASE_URL}/projects/scenographie-muse-prehistoire-hyphosphere.jpg`}
-						alt="Affiche Journée de l'architecture"
+						alt="Vue intérieure de l'Hypnosphère, une structure immersive en bois."
 						class="max-h-96 w-full rounded-2xl object-cover"
 					/>
 				</figure>
@@ -176,7 +176,10 @@
 							<a
 								href="https://www.instagram.com/p/CoMZZjbM3og/?utm_source=ig_embed&amp;utm_campaign=loading"
 								style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
-								target="_blank">Une publication d'Aloïs Lamotte (@mawgwar)</a
+								target="_blank"
+								rel="noopener noreferrer"
+								>Une publication d'Aloïs Lamotte (@mawgwar)
+								<span class="sr-only">(s'ouvre dans un nouvel onglet)</span></a
 							>
 						</p>
 					</div>
@@ -234,7 +237,9 @@
 						l’ensemble une dimension à la fois classique et contemporaine.
 						<br />
 						<cite class="italic text-blue-800">
-							<a href="https://www.instagram.com/p/BsIz7mPHJ9C/?hl=en" target="_blank" rel="noopener noreferrer"> Le lien Instagram </a>
+							<a href="https://www.instagram.com/p/BsIz7mPHJ9C/?hl=en" target="_blank" rel="noopener noreferrer">
+								Le lien Instagram <span class="sr-only">(s'ouvre dans un nouvel onglet)</span>
+							</a>
 						</cite>
 					</p>
 				</div>
@@ -328,7 +333,10 @@
 							<a
 								href="https://www.instagram.com/p/Cdf5Muaq-MF/?utm_source=ig_embed&amp;utm_campaign=loading"
 								style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
-								target="_blank">Une publication d'Aloïs Lamotte (@mawgwar)</a
+								target="_blank"
+								rel="noopener noreferrer"
+								>Une publication d'Aloïs Lamotte (@mawgwar)
+								<span class="sr-only">(s'ouvre dans un nouvel onglet)</span></a
 							>
 						</p>
 					</div>
