@@ -39,7 +39,13 @@
 				<div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
 					{#each artWorksByYear[Number(year)] as artWork}
 						<div class="flex w-full items-center justify-center">
-							<a href="/{artWorkType}/{artWork.link}" class="relative block w-full cursor-pointer border-0 bg-transparent p-0" role="button" tabindex="0">
+							<a
+								href="/{artWorkType}/{artWork.link}"
+								class="relative block w-full cursor-pointer border-0 bg-transparent p-0"
+								role="button"
+								tabindex="0"
+								aria-label="Voir les détails de l'œuvre {artWork.title}"
+							>
 								<div
 									class="svgBlob"
 									style="aspect-ratio: {artWork.dimensions && artWork.dimensions.width && artWork.dimensions.height
