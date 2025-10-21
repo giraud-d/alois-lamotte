@@ -154,7 +154,7 @@ export const paintings: ArtWork[] = [
 			'Entre deux confinements, j’ai voulu faire pousser un arbre dans la maison. Un arbre pour grimper, rêver, s’évader. Une cabane tout en haut comme repaire secret, et une échelle pour suivre les enfants qui grandissent. Dans les branches, j’ai caché des animaux: un petit jeu à deux, pour apprendre leurs noms et inventer des histoires au fil du temps.',
 		year: 2020,
 		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/toise-de-croissance_preview.jpg`,
-		link: '17-toise-de-croissance',
+		link: 'toise-de-croissance',
 		views: [
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/toise-de-croissance_main.jpg`,
 			`${PUBLIC_STATIC_ASSET_BASE_URL}/paintings/toise-de-croissance_detail-1.jpg`,

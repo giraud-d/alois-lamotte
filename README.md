@@ -67,6 +67,14 @@ Commentaires du build:Activé
 
 # TODOs
 
+## Must have
+
+- Apply TTL on assets
+
+## Should have
+
+- ...
+
 ## Nice to have
 
 - Use better image optimization with [Svelte tools](https://svelte.dev/docs/kit/images)
