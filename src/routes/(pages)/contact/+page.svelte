@@ -15,8 +15,13 @@
 		<div class="mt-12 grid justify-items-stretch gap-4 sm:grid-cols-2">
 			<section class="justify-self-center">
 				<h2 class="pb-8 text-center text-xl font-semibold">Par instagram :</h2>
-				<a href="https://www.instagram.com/mawgwar/" rel="noreferrer" target="_blank" class="text-center text-2xl text-gray-800 transition hover:opacity-75">
-					<span class="sr-only">Instagram</span>
+				<a
+					href="https://www.instagram.com/mawgwar/"
+					rel="noopener noreferrer"
+					target="_blank"
+					class="text-center text-2xl text-gray-800 transition hover:opacity-75"
+				>
+					<span class="sr-only">Instagram (s'ouvre dans un nouvel onglet)</span>
 					<svg class="mx-auto size-24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 						<path
 							fill-rule="evenodd"
@@ -28,8 +33,12 @@
 			</section>
 			<section class="mt-16 justify-self-center sm:mt-0">
 				<h2 class="pb-8 text-center text-xl font-semibold">Par mail :</h2>
-				<a href="mailto:contact@alois-lamotte.com" rel="noreferrer" target="_blank" class="text-center text-xl text-gray-800 transition hover:opacity-75"
-					>contact@alois-lamotte.com</a
+				<a
+					href="mailto:contact@alois-lamotte.com"
+					rel="noopener noreferrer"
+					target="_blank"
+					class="text-center text-xl text-gray-800 transition hover:opacity-75"
+					>contact@alois-lamotte.com <span class="sr-only">(s'ouvre dans un nouvel onglet)</span></a
 				>
 			</section>
 		</div>

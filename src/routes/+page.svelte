@@ -7,17 +7,28 @@
 </script>
 
 <!-- Intro fullscreen -->
-<div
+<main
 	class="min-h-screen-ios relative min-h-screen bg-cover bg-center bg-no-repeat"
 	style="background-image: url('{PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/perspective-pour-ecole-architecture_main.jpg');"
+	role="img"
+	aria-label="Peinture d'une perspective pour une école d'architecture"
 >
 	<div class="h-24"></div>
 	<div class="absolute bottom-10 flex w-full animate-bounce justify-center">
-		<svg class="h-6 w-6 text-white" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+		<svg
+			class="h-6 w-6 text-white"
+			fill="none"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="2"
+			viewBox="0 0 24 24"
+			stroke="currentColor"
+			aria-hidden="true"
+		>
 			<path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
 		</svg>
 	</div>
-</div>
+</main>
 
 <Header withoutName={true} />
 

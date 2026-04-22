@@ -11,8 +11,8 @@
 				<p>Alois Lamotte</p>
 			</div>
 			<div class="flex justify-end gap-6">
-				<a href="https://www.instagram.com/mawgwar/" rel="noreferrer" target="_blank" class="text-white transition hover:opacity-75">
-					<span class="sr-only">Instagram</span>
+				<a href="https://www.instagram.com/mawgwar/" rel="noopener noreferrer" target="_blank" class="text-white transition hover:opacity-75">
+					<span class="sr-only">Instagram (s'ouvre dans un nouvel onglet)</span>
 					<svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 						<path
 							fill-rule="evenodd"
@@ -26,11 +26,13 @@
 
 		<p class="text-end text-xs text-gray-300">
 			Site réalisé avec
-			<svg class="inline h-4 w-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+			<svg class="inline h-4 w-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
 				<path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
 			</svg>
 			par
-			<a href="https://www.linkedin.com/in/damiengiraudet/" target="_blank" class="underline">Damien Giraudet</a>
+			<a href="https://www.linkedin.com/in/damiengiraudet/" target="_blank" rel="noopener noreferrer" class="underline"
+				>Damien Giraudet <span class="sr-only">(s'ouvre dans un nouvel onglet)</span></a
+			>
 		</p>
 	</div>
 </footer>

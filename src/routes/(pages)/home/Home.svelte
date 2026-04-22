@@ -35,28 +35,28 @@
 	<section class="container mx-auto mb-8 px-5 py-8">
 		<h2 class="pb-16 text-xl font-semibold">Venez découvrir toutes mes réalisations :</h2>
 		<div class="grid grid-flow-row-dense gap-16 sm:grid-cols-2 lg:grid-cols-3">
-			<a href="/painting" class="square mx-auto">
-				<span></span>
-				<span></span>
-				<span></span>
+			<a href="/painting" class="square mx-auto" aria-label="Découvrir mes peintures">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
 				<div class="content">
 					<h2 class="text-xl font-semibold">Peinture</h2>
 					<p>J'utilise des pinceaux et des toiles</p>
 				</div>
 			</a>
-			<a href="/illustration" class="square mx-auto">
-				<span></span>
-				<span></span>
-				<span></span>
+			<a href="/illustration" class="square mx-auto" aria-label="Découvrir mes illustrations">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
 				<div class="content">
 					<h2 class="text-xl font-semibold">Illustration</h2>
 					<p>J'utilise des ordinateurs et adobe</p>
 				</div>
 			</a>
-			<a href="/project" class="square mx-auto sm:col-span-2 lg:col-span-1">
-				<span></span>
-				<span></span>
-				<span></span>
+			<a href="/project" class="square mx-auto sm:col-span-2 lg:col-span-1" aria-label="Découvrir mes projets">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
 				<div class="content">
 					<h2 class="text-xl font-semibold">Projets</h2>
 					<p>Vidéo youtube Mobilier des perspectives d'archi une première de couverture miniature de cinéma</p>
