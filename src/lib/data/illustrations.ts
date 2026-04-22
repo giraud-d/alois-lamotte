@@ -3,6 +3,17 @@ import { PUBLIC_STATIC_ASSET_BASE_URL } from '$env/static/public';
 
 export const illustrations: ArtWork[] = [
 	{
+		title: 'Portrait Ada Gentile',
+		description: "Portrait réalisé pour le concours organisé par l'OSEMP.",
+		year: 2026,
+		preview: `${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/ada-gentile-portrait_preview.jpg`,
+		link: 'portrait-ada-gentile',
+		views: [`${PUBLIC_STATIC_ASSET_BASE_URL}/illustrations/ada-gentile-portrait_main.jpg`],
+		printAvailable: true,
+		technique: 'Acrylique et crayon de couleur sur papier',
+		dimensions: { height: 20, width: 24 }
+	},
+	{
 		title: 'Mes fantômes',
 		description:
 			'Avez-vous chez vous un objet qui vous fait penser à quelqu’un ? Qui vous évoque un souvenir précis dès l’instant où vous y posez le regard ? Ce bureau que l’on devine dans ce petit format en est empli. Ces souvenirs sont si prégnants qu’ils m’apparaissent comme des fantômes coincés dans une boucle de souvenir sans fin.',
